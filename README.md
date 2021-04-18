@@ -1,6 +1,8 @@
-# Iago Suárez personal webpage
-## This is just the code of my personal website
+# Iago Suárez personal website
+This is just the code of my personal website
 
+
+## Build it!
 To compile it:
 ```
 yarn build
