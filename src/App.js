@@ -84,24 +84,18 @@ function App () {
             <div>
               <h2>Publications</h2>
               <ul>
-                <li>Suárez, I., Muñoz, E., Buenaposada, J. M., & Baumela, L. (2018, October).
-                  <b>FSG: A statistical approach to line detection via fast segments grouping</b>. In
-                  <i>2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</i> (pp. 97-102).
-                  IEEE.
+                <li>Suárez, I., Buenaposada, J. M., & Baumela, L. (2021). <b>ELSED: Enhanced Line SEgment Drawing</b>.
                 </li>
-                <a href="https://www.youtube.com/watch?v=RknriYhmeUI">Video</a>, &nbsp;
-                <a
-                  href="https://raw.githubusercontent.com/graffter/fsg-benchmark/master/fsg-paper.pdf">Paper</a>, &nbsp;
-                <a href="https://github.com/graffter/fsg-benchmark">Dataset</a>, &nbsp;
-                <a href="https://doi.org/10.1109/IROS.2018.8594434">DOI</a>
+                <a href="https://arxiv.org/abs/2108.03144">Paper</a>, &nbsp;
+                <a href="https://github.com/iago-suarez/ELSED">Source code</a> &nbsp;
                 <br/>
-                <li>Suárez, I., Sfeir, G., Buenaposada, J. M., & Baumela, L. (2019, July). <b>BELID: Boosted efficient
-                  local image descriptor</b>. In
-                  <i>Iberian Conference on Pattern Recognition and Image Analysis</i> (pp. 449-460). Springer, Cham.
+                <li>Suárez, I., Buenaposada, J. M., & Baumela, L. (2021). <b>Revisiting Binary Local Image Description for Resource Limited Devices</b>.
+                   <i> IEEE Robotics and Automation Letters</i>.
                 </li>
-                <a href="https://www.youtube.com/watch?v=RknriYhmeUI">Video</a>, &nbsp;
-                <a href="http://www.dia.fi.upm.es/~pcr/publications/PRL_2020_web_BEBLID.pdf">Paper</a>, &nbsp;
-                <a href="https://doi.org/10.1007/978-3-030-31332-6_39">DOI</a>
+                <a href="https://arxiv.org/abs/2108.08380">Paper</a>, &nbsp;
+                <a href="https://github.com/iago-suarez/efficient-descriptors">Source code (C++)</a>, &nbsp;
+                <a href="https://doi.org/10.1109/LRA.2021.3107024">DOI</a>, &nbsp;
+                <a href="https://iago-suarez.com/efficient-descriptors">Project page</a>
                 <br/>
                 <li>Suárez, I., Sfeir, G., Buenaposada, J. M., & Baumela, L. (2020). <b>BEBLID: Boosted efficient binary
                   local image descriptor</b>.
@@ -113,6 +107,25 @@ function App () {
                   href="https://towardsdatascience.com/improving-your-image-matching-results-by-14-with-one-line-of-code-b72ae9ca2b73">Python
                   OpenCV Tutorial</a>, &nbsp;
                 <a href="https://doi.org/10.1016/j.patrec.2020.04.005">DOI</a>
+                <br/>
+                <li>Suárez, I., Sfeir, G., Buenaposada, J. M., & Baumela, L. (2019, July). <b>BELID: Boosted efficient
+                  local image descriptor</b>. In
+                  <i>Iberian Conference on Pattern Recognition and Image Analysis</i> (pp. 449-460). Springer, Cham.
+                </li>
+                <a href="https://www.youtube.com/watch?v=RknriYhmeUI">Video</a>, &nbsp;
+                <a href="http://www.dia.fi.upm.es/~pcr/publications/PRL_2020_web_BEBLID.pdf">Paper</a>, &nbsp;
+                <a href="https://doi.org/10.1007/978-3-030-31332-6_39">DOI</a>
+                <br/>
+                <li>Suárez, I., Muñoz, E., Buenaposada, J. M., & Baumela, L. (2018, October).
+                  <b>FSG: A statistical approach to line detection via fast segments grouping</b>. In
+                  <i>2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</i> (pp. 97-102).
+                  IEEE.
+                </li>
+                <a href="https://www.youtube.com/watch?v=RknriYhmeUI">Video</a>, &nbsp;
+                <a
+                  href="https://raw.githubusercontent.com/graffter/fsg-benchmark/master/fsg-paper.pdf">Paper</a>, &nbsp;
+                <a href="https://github.com/graffter/fsg-benchmark">Dataset</a>, &nbsp;
+                <a href="https://doi.org/10.1109/IROS.2018.8594434">DOI</a>
                 <br/>
               </ul>
             </div>
@@ -130,6 +143,12 @@ function App () {
               <br/>
               Advisor of the following Final Degree and Final Master projects:
               <ul>
+                <li>
+                  <b>García-Siñeriz Sánchez, Ignacio </b> (2021). <a href="http://oa.upm.es/68051/1/TFG_IGNACIO_GARCIA_SINERIZ_SANCHEZ.pdf">Interfaz gráfica para el uso de Realidad Aumentada en Unity3D</a>. Proyecto Fin de Carrera.
+                </li>
+                <li>
+                  <b>Díaz Álvarez, Jorge </b> (2021). <a href="http://oa.upm.es/68007/1/TFG_JORGE_DIAZ_ALVAREZ.pdf">Visión por computador para el uso de Realidad Aumentada en Unity3D</a>. Proyecto Fin de Carrera.
+                </li>
                 <li>
                   <b>Wei, Tingyun</b> (2020). <a href="http://oa.upm.es/65861/1/TFM_TINGYUN_WEI.pdf">A multi-platform comparison of local feature description methods</a>. Thesis (Master thesis).
                 </li>
@@ -153,6 +172,13 @@ function App () {
             <div>
               <h2>Education</h2>
               <ul>
+                <li>
+                  <b>Research Internship - ETH Zürich</b><br/>
+                  <p className="text-justify">
+                    During three amazing months I have been working in <a href="https://www.cvg.ethz.ch/">CVG</a> group
+                    of ETH under the supervision of Prof. Marc Pollefeys. I developed a project about geometric-aware line
+                    segment matching for SLAM systems.</p>
+                </li>
                 <li>
                   <b>PhD (In progress) - Universidad Politécnica de Madrid: Augmented Reality in Urban
                     Environments</b><br/>
@@ -200,12 +226,17 @@ function App () {
               <h2>Other Projects</h2>
               I am specially proud of the following companies/project:<br/><br/>
               <ul>
+                <li>The Graffter. &nbsp;
+                  <a href="http://www.thegraffter.com/en/">webpage</a>, &nbsp;
+                  <a href="https://www.youtube.com/channel/UCaA4tTBqW6Wbkxz1Ep-4szw">videos1</a>,  &nbsp;
+                  <a href="https://youtu.be/XIBLZUiOKmc">video2</a>
+                </li>
                 <li>XOIA Software Development. &nbsp;
                   <a href="https://xoia.es/">webpage</a>, &nbsp;
                   <a href="https://youtu.be/gJum_Qv_Ws8">video1</a>,  &nbsp;
                   <a href="https://youtu.be/74K1lK3kQJM">video2</a>
                 </li>
-                <li>Eation Tech. &nbsp;<a href="https://www.eationtech.com/">webpage</a>, &nbsp;<a href="https://youtu.be/0cbVPS4-VEQ">video</a></li>
+                {/*<li>Eation Tech. &nbsp;<a href="https://www.eationtech.com/">webpage</a>, &nbsp;<a href="https://youtu.be/0cbVPS4-VEQ">video</a></li>*/}
                 <li>White Mirror. &nbsp;<a href="https://www.whitemirror.es/">webpage</a></li>
               </ul>
             </div>
