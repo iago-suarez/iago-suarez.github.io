@@ -73,11 +73,11 @@ function App () {
           <div className="container">
             <div className="text-justify">
               <p>Computer Engineer - Universidade Da Coruña, Artificial Intelligence (AI) Máster - Universidad
-                Politécnica de Madrid (UPM) and PhD student in AI (UPM), I have been researching several years in
+                Politécnica de Madrid (UPM) and PhD in AI (UPM), I have been researching several years in
                 Computer Vision (CV), delivering jobs in CV and robotics symposiums and journals and contributing to
                 important libraries such as OpenCV.</p>
               <p>In business, among a large list of projects I would like to highlight my contributions in The Graffter,
-                where I develop Augmented Reality technology for urban environment and XOIA Software Development, a
+                where I developed Augmented Reality technology for urban environment and XOIA Software Development, a
                 company that I have co-founded and nowadays has more than 10 employees.</p>
             </div>
             <br/>
