@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.5db7fc0f.chunk.css",
-    "main.js": "/static/js/main.f0ab2e27.chunk.js",
-    "main.js.map": "/static/js/main.f0ab2e27.chunk.js.map",
+    "main.js": "/static/js/main.21296229.chunk.js",
+    "main.js.map": "/static/js/main.21296229.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.14a1c503.js",
     "runtime-main.js.map": "/static/js/runtime-main.14a1c503.js.map",
     "static/css/2.6e86b593.chunk.css": "/static/css/2.6e86b593.chunk.css",
@@ -21,6 +21,7 @@
     "static/media/Poster_PhDSymposium19.a5816fd3.pdf": "/static/media/Poster_PhDSymposium19.a5816fd3.pdf",
     "static/media/Slides_IROS18.83669e70.pdf": "/static/media/Slides_IROS18.83669e70.pdf",
     "static/media/Slides_IbPRIA19.e66fe1a7.pdf": "/static/media/Slides_IbPRIA19.e66fe1a7.pdf",
+    "static/media/Slides_PhD_iago.c9d33a7b.pdf": "/static/media/Slides_PhD_iago.c9d33a7b.pdf",
     "static/media/Slides_TFM_iago.386c2d76.pdf": "/static/media/Slides_TFM_iago.386c2d76.pdf",
     "static/media/mypicture.55c08200.jpg": "/static/media/mypicture.55c08200.jpg",
     "static/media/vanishing.c8392133.mp4": "/static/media/vanishing.c8392133.mp4"
@@ -30,6 +31,6 @@
     "static/css/2.6e86b593.chunk.css",
     "static/js/2.f148eced.chunk.js",
     "static/css/main.5db7fc0f.chunk.css",
-    "static/js/main.f0ab2e27.chunk.js"
+    "static/js/main.21296229.chunk.js"
   ]
 }
