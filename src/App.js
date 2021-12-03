@@ -7,6 +7,7 @@ import SlidesIROS18 from './documents/Slides_IROS18.pdf'
 import SlidesIbPRIA18 from './documents/Slides_IbPRIA19.pdf'
 import PosterSymposiumUPM from './documents/Poster_PhDSymposium19.pdf'
 import SlidesTFM from './documents/Slides_TFM_iago.pdf'
+import SlidesPhD from './documents/Slides_PhD_iago.pdf'
 import VanishingPointsVideo from './videos/vanishing.mp4'
 import './App.css'
 import './Sidebar.css'
@@ -154,7 +155,8 @@ function App () {
                     working with RANSAC based geometric techniques to improve the estimation of the device pose in the
                     world.</p>
                   <Icon.ArrowRight/> &nbsp;
-                  <a href="https://oa.upm.es/69043" target="_blank">thesis</a> &nbsp;
+                  <a href="https://oa.upm.es/69043" target="_blank" rel="noreferrer">thesis</a>, &nbsp;
+                  <a href={SlidesPhD} target="_blank" rel="noreferrer">slides</a>
                 </li><br/>
                 <li>
                   <b>Master in Artificial Intelligence - Universidad Politécnica de Madrid</b> (2016)<br/>
@@ -163,16 +165,16 @@ function App () {
                   It was also one introduction to the research world and a first step into my PhD.<br/>
                   <Icon.ArrowRight/> &nbsp;
                   Project: <b>Prototipo de motor de realidad aumentada tridimensional para dispositivos móviles</b>.&nbsp;
-                  <a href="https://oa.upm.es/43350/1/TFM_XOANIAGO_SUAREZ_CANOSA.pdf" target="_blank">thesis</a>, &nbsp;
-                  <a href={SlidesTFM} target="_blank">slides</a>, &nbsp;
-                  <a href="https://youtu.be/NnIveZCbigk" target="_blank">video</a> &nbsp;
+                  <a href="https://oa.upm.es/43350/1/TFM_XOANIAGO_SUAREZ_CANOSA.pdf" target="_blank" rel="noreferrer">thesis</a>, &nbsp;
+                  <a href={SlidesTFM} target="_blank" rel="noreferrer">slides</a>, &nbsp;
+                  <a href="https://youtu.be/NnIveZCbigk" target="_blank" rel="noreferrer">video</a> &nbsp;
                 </li><br/>
                 <li>
                   <b>Bachelor in Computer Science - Universidade da Coruña</b> (2015)<br/>
                   <Icon.ArrowRight/> &nbsp;
                     Bachelor project: <b>Web application for the analysis of human behavior</b>.&nbsp;
-                      <a href="https://www.youtube.com/watch?v=VtWA3Z4OhHQ" target="_blank">video</a>, &nbsp;
-                      <a href="https://github.com/iago-suarez/ancoweb-TFG" target="_blank">source code</a>
+                      <a href="https://www.youtube.com/watch?v=VtWA3Z4OhHQ" target="_blank" rel="noreferrer">video</a>, &nbsp;
+                      <a href="https://github.com/iago-suarez/ancoweb-TFG" target="_blank" rel="noreferrer">source code</a>
                 </li>
               </ul>
             </div>
@@ -192,43 +194,43 @@ function App () {
               <ul>
                 <li>
                   <b>García-Siñeriz Sánchez, Ignacio </b> (2021). &nbsp;
-                  <a href="http://oa.upm.es/68051/1/TFG_IGNACIO_GARCIA_SINERIZ_SANCHEZ.pdf" target="_blank">
+                  <a href="http://oa.upm.es/68051/1/TFG_IGNACIO_GARCIA_SINERIZ_SANCHEZ.pdf" target="_blank" rel="noreferrer">
                     Interfaz gráfica para el uso de Realidad Aumentada en Unity3D
                   </a>. Proyecto Fin de Carrera.
                 </li>
                 <li>
                   <b>Díaz Álvarez, Jorge </b> (2021). &nbsp;
-                  <a href="http://oa.upm.es/68007/1/TFG_JORGE_DIAZ_ALVAREZ.pdf" target="_blank">
+                  <a href="http://oa.upm.es/68007/1/TFG_JORGE_DIAZ_ALVAREZ.pdf" target="_blank" rel="noreferrer">
                     Visión por computador para el uso de Realidad Aumentada en Unity3D
                   </a>. Proyecto Fin de Carrera.
                 </li>
                 <li>
                   <b>Wei, Tingyun</b> (2020). &nbsp;
-                  <a href="http://oa.upm.es/65861/1/TFM_TINGYUN_WEI.pdf" target="_blank">
+                  <a href="http://oa.upm.es/65861/1/TFM_TINGYUN_WEI.pdf" target="_blank" rel="noreferrer">
                     A multi-platform comparison of local feature description methods
                   </a>. Thesis (Master thesis).
                 </li>
                 <li>
                   <b>Olivares Gil, Alicia</b> (2020). &nbsp;
-                  <a href="http://oa.upm.es/63767/1/TFM_ALICIA_OLIVARES_GIL.pdf" target="_blank">
+                  <a href="http://oa.upm.es/63767/1/TFM_ALICIA_OLIVARES_GIL.pdf" target="_blank" rel="noreferrer">
                     Estudio sobre detectores y descriptores de segmentos rectilíneos
                   </a>. Thesis (Master thesis)
                 </li>
                 <li>
                   <b>Cobo Cabornero, Alejandro</b> (2019). &nbsp;
-                  <a href="http://oa.upm.es/55778/1/TFG_ALEJANDRO_COBO_CABORNERO.pdf" target="_blank">
+                  <a href="http://oa.upm.es/55778/1/TFG_ALEJANDRO_COBO_CABORNERO.pdf" target="_blank" rel="noreferrer">
                     Evaluación y optimización de un descriptor de características
                   </a>. Proyecto Fin de Carrera.
                 </li>
                 <li>
                   <b>Audante Ramos, Néstor Rafael</b> (2019). &nbsp;
-                  <a href="http://oa.upm.es/56021/1/TFM_NESTOR_RAFAEL_AUDANTE_RAMOS.pdf" target="_blank">
+                  <a href="http://oa.upm.es/56021/1/TFM_NESTOR_RAFAEL_AUDANTE_RAMOS.pdf" target="_blank" rel="noreferrer">
                     Simulación de entornos urbanos para el aprendizaje de descriptores locales de apariencia
                   </a>. Thesis (Master thesis)
                 </li>
                 <li>
                   <b>Sfeir Malavé, Ghesn Daniel</b> (2019).  &nbsp;
-                  <a href="http://oa.upm.es/55889/1/TFM_GHESN_DANIEL_SFEIR_MALAVE.pdf" target="_blank">
+                  <a href="http://oa.upm.es/55889/1/TFM_GHESN_DANIEL_SFEIR_MALAVE.pdf" target="_blank" rel="noreferrer">
                     Learning highly efficient local image descriptors
                   </a>. Thesis (Master thesis)
                 </li>
@@ -241,13 +243,13 @@ function App () {
               <h2>Public Presentations</h2>
               <ul>
                 <li><b>Master Universitario en Vision Artificial (URJC) 2021, 2020</b>: Augmented Reality in Urban Environments Seminar.&nbsp;
-                  <a href="https://youtu.be/zijWdXDjwb0"  target="_blank">video</a>
+                  <a href="https://youtu.be/zijWdXDjwb0"  target="_blank" rel="noreferrer">video</a>
                 </li>
                 <li><b>2019: 9th Iberian Conference on Pattern Recognition and Image Analysis (IbPRIA)</b>: BELID: Boosted Efficient Local Image Descriptor.&nbsp;
-                  <a href={SlidesIbPRIA18} target="_blank">slides</a>
+                  <a href={SlidesIbPRIA18} target="_blank" rel="noreferrer">slides</a>
                 </li>
                 <li><b>2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</b>: FSG: A statistical approach to line detection via fast segments grouping.&nbsp;
-                  <a href={SlidesIROS18} target="_blank">slides</a>
+                  <a href={SlidesIROS18} target="_blank" rel="noreferrer">slides</a>
                 </li>
                 <li><b>TEDx OviedoUniversity 2017</b>: The power of the Augmented Reality (Workshop Speaker)</li>
               </ul>
@@ -260,8 +262,8 @@ function App () {
                 <li>Cum Laude PhD (Nov, 2021)</li>
                 <li>Best Student Paper Award of ibPRIA 2019</li>
                 <li>Best PhD Thesis Award in the ICT field of the Polytechnic University of Madrid (May, 2019), &nbsp;
-                  <a href="https://youtu.be/pJN94oZgqWY" target="_blank">video</a>, &nbsp;
-                  <a href={PosterSymposiumUPM} target="_blank">poster</a>
+                  <a href="https://youtu.be/pJN94oZgqWY" target="_blank" rel="noreferrer">video</a>, &nbsp;
+                  <a href={PosterSymposiumUPM} target="_blank" rel="noreferrer">poster</a>
                 </li>
                 <li>Primer Premio al mejor Trabajo Fin de Grado de Soft. Libre (November, 2015)</li>
               </ul>
@@ -273,22 +275,22 @@ function App () {
               I am specially proud of the following companies/project:<br/><br/>
               <ul>
                 <li>The Graffter. &nbsp;
-                  <a href="http://www.thegraffter.com/en/" target="_blank">webpage</a>, &nbsp;
-                  <a href="https://www.youtube.com/channel/UCaA4tTBqW6Wbkxz1Ep-4szw" target="_blank">videos1</a>,  &nbsp;
-                  <a href="https://youtu.be/XIBLZUiOKmc" target="_blank">video2</a>
+                  <a href="http://www.thegraffter.com/en/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
+                  <a href="https://www.youtube.com/channel/UCaA4tTBqW6Wbkxz1Ep-4szw" target="_blank" rel="noreferrer">videos1</a>,  &nbsp;
+                  <a href="https://youtu.be/XIBLZUiOKmc" target="_blank" rel="noreferrer">video2</a>
                 </li>
                 <li>XOIA Software Development. &nbsp;
-                  <a href="https://xoia.es/" target="_blank">webpage</a>, &nbsp;
-                  <a href="https://youtu.be/gJum_Qv_Ws8" target="_blank">video1</a>,  &nbsp;
-                  <a href="https://youtu.be/74K1lK3kQJM" target="_blank">video2</a>
+                  <a href="https://xoia.es/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
+                  <a href="https://youtu.be/gJum_Qv_Ws8" target="_blank" rel="noreferrer">video1</a>,  &nbsp;
+                  <a href="https://youtu.be/74K1lK3kQJM" target="_blank" rel="noreferrer">video2</a>
                 </li>
                 <li>Bookker. &nbsp;
-                  <a href="https://www.bookkercorp.com/" target="_blank">webpage</a>, &nbsp;
-                  <a href="https://youtu.be/hM3mOG7bLEU" target="_blank">video1</a>,  &nbsp;
-                  <a href="https://youtu.be/pYOwr3o-AWY" target="_blank">video2</a>
+                  <a href="https://www.bookkercorp.com/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
+                  <a href="https://youtu.be/hM3mOG7bLEU" target="_blank" rel="noreferrer">video1</a>,  &nbsp;
+                  <a href="https://youtu.be/pYOwr3o-AWY" target="_blank" rel="noreferrer">video2</a>
                 </li>
                 {/*<li>Eation Tech. &nbsp;<a href="https://www.eationtech.com/">webpage</a>, &nbsp;<a href="https://youtu.be/0cbVPS4-VEQ">video</a></li>*/}
-                <li>White Mirror. &nbsp;<a href="https://www.whitemirror.es/" target="_blank">webpage</a></li>
+                <li>White Mirror. &nbsp;<a href="https://www.whitemirror.es/" target="_blank" rel="noreferrer">webpage</a></li>
               </ul>
             </div>
             <br/>
