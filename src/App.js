@@ -27,13 +27,13 @@ function App () {
               <img src={mypicture} className="img-fluid rounded-circle img-thumbnail" alt="Iago Suárez"/>
             </li>
             <li>
-              <a href="#">Publications</a>
+              <a href="#publications-section">Publications</a>
             </li>
             <li>
-              <a href="#">Projects</a>
+              <a href="#education-section">Education</a>
             </li>
             <li>
-              <a href="#">Education</a>
+              <a href="#projects-section">Projects</a>
             </li>
             <li>
               <a className="medium-icon col-sm" href="https://www.linkedin.com/in/iago-suarez/"><Icon.Linkedin/></a>
@@ -84,7 +84,7 @@ function App () {
                 company that I have co-founded and nowadays has more than 10 employees.</p>
             </div>
             <br/>
-            <div>
+            <div id="publications-section">
               <h2>Publications</h2>
               <ul>
                 <li>Suárez, I., Buenaposada, J. M., & Baumela, L. (2021). <b>ELSED: Enhanced Line SEgment Drawing</b>.
@@ -93,7 +93,7 @@ function App () {
                 <a href="https://github.com/iago-suarez/ELSED">Source code</a> &nbsp;
                 <br/>
                 <li>Suárez, I., Buenaposada, J. M., & Baumela, L. (2021). <b>Revisiting Binary Local Image Description for Resource Limited Devices</b>.
-                   <i> IEEE Robotics and Automation Letters</i>.
+                   <i> IEEE Robotics and Automation Letters</i>, 6(4), 8317-8324.
                 </li>
                 <a href="https://arxiv.org/abs/2108.08380">Paper</a>, &nbsp;
                 <a href="https://github.com/iago-suarez/efficient-descriptors">Source code (C++)</a>, &nbsp;
@@ -134,7 +134,51 @@ function App () {
             </div>
             <br/>
 
-            <div>
+            <div id="education-section">
+              <h2>Education</h2>
+              <ul>
+                <li>
+                  <b>Research Internship - ETH Zürich</b> (2021)<br/>
+                  <p className="text-justify">
+                    During three amazing months I have been working in <a href="https://www.cvg.ethz.ch/">CVG</a> group
+                    of ETH under the supervision of Prof. Marc Pollefeys. I developed a project about geometric-aware line
+                    segment matching for SLAM systems.</p>
+                </li>
+                <li>
+                  <b>PhD - Universidad Politécnica de Madrid: Augmented Reality in Urban Environments</b> (2021)<br/>
+
+                  <p className="text-justify">
+                    In my PhD I created and improved the basics of Augmented Reality to move it towards Urban
+                    Environments. My research is centered in efficient detectors and descriptors for local image
+                    features such as corners or line segments where we have already published two articles. We are also
+                    working with RANSAC based geometric techniques to improve the estimation of the device pose in the
+                    world.</p>
+                  <Icon.ArrowRight/> &nbsp;
+                  <a href="https://oa.upm.es/69043" target="_blank">thesis</a> &nbsp;
+                </li><br/>
+                <li>
+                  <b>Master in Artificial Intelligence - Universidad Politécnica de Madrid</b> (2016)<br/>
+                  In this master I could learn about some important AI topics such as: Machine Learning, Computer
+                  Vision, Evolutionary Computing or Advanced Neural Networks.
+                  It was also one introduction to the research world and a first step into my PhD.<br/>
+                  <Icon.ArrowRight/> &nbsp;
+                  Project: <b>Prototipo de motor de realidad aumentada tridimensional para dispositivos móviles</b>.&nbsp;
+                  <a href="https://oa.upm.es/43350/1/TFM_XOANIAGO_SUAREZ_CANOSA.pdf" target="_blank">thesis</a>, &nbsp;
+                  <a href={SlidesTFM} target="_blank">slides</a>, &nbsp;
+                  <a href="https://youtu.be/NnIveZCbigk" target="_blank">video</a> &nbsp;
+                </li><br/>
+                <li>
+                  <b>Bachelor in Computer Science - Universidade da Coruña</b> (2015)<br/>
+                  <Icon.ArrowRight/> &nbsp;
+                    Bachelor project: <b>Web application for the analysis of human behavior</b>.&nbsp;
+                      <a href="https://www.youtube.com/watch?v=VtWA3Z4OhHQ" target="_blank">video</a>, &nbsp;
+                      <a href="https://github.com/iago-suarez/ancoweb-TFG" target="_blank">source code</a>
+                </li>
+              </ul>
+            </div>
+            <br/>
+
+            <div id="teaching-section">
               <h2>Teaching</h2>
               Teaching assistant in the following courses (2019 - 2021):
               <ul>
@@ -193,56 +237,11 @@ function App () {
             </div>
             <br/>
 
-            <div>
-              <h2>Education</h2>
-              <ul>
-                <li>
-                  <b>Research Internship - ETH Zürich</b> (2021)<br/>
-                  <p className="text-justify">
-                    During three amazing months I have been working in <a href="https://www.cvg.ethz.ch/">CVG</a> group
-                    of ETH under the supervision of Prof. Marc Pollefeys. I developed a project about geometric-aware line
-                    segment matching for SLAM systems.</p>
-                </li>
-                <li>
-                  <b>PhD - Universidad Politécnica de Madrid: Augmented Reality in Urban Environments</b> (2021)<br/>
-
-                  <p className="text-justify">
-                    In my PhD I created and improved the basics of Augmented Reality to move it towards Urban
-                    Environments. My research is centered in efficient detectors and descriptors for local image
-                    features such as corners or line segments where we have already published two articles. We are also
-                    working with RANSAC based geometric techniques to improve the estimation of the device pose in the
-                    world.</p>
-                  <Icon.ArrowRight/> &nbsp;
-                  <a href="https://oa.upm.es/69043" target="_blank">thesis</a> &nbsp;
-                </li><br/>
-                <li>
-                  <b>Master in Artificial Intelligence - Universidad Politécnica de Madrid</b> (2016)<br/>
-                  In this master I could learn about some important AI topics such as: Machine Learning, Computer
-                  Vision, Evolutionary Computing or Advanced Neural Networks.
-                  It was also one introduction to the research world and a first step into my PhD.<br/>
-                  <Icon.ArrowRight/> &nbsp;
-                  Project: <b>Prototipo de motor de realidad aumentada tridimensional para dispositivos móviles</b>.&nbsp;
-                  <a href="https://oa.upm.es/43350/1/TFM_XOANIAGO_SUAREZ_CANOSA.pdf" target="_blank">thesis</a>, &nbsp;
-                  <a href={SlidesTFM} target="_blank">slides</a>, &nbsp;
-                  <a href="https://youtu.be/NnIveZCbigk" target="_blank">video</a> &nbsp;
-                </li><br/>
-                <li>
-                  <b>Bachelor in Computer Science - Universidade da Coruña</b> (2015)<br/>
-                  <Icon.ArrowRight/> &nbsp;
-                    Bachelor project: <b>Web application for the analysis of human behavior</b>.&nbsp;
-                      <a href="https://www.youtube.com/watch?v=VtWA3Z4OhHQ" target="_blank">video</a>, &nbsp;
-                      <a href="https://github.com/iago-suarez/ancoweb-TFG" target="_blank">source code</a>
-                </li>
-              </ul>
-            </div>
-            <br/>
-
-            <div>
+            <div id="presentations-section">
               <h2>Public Presentations</h2>
               <ul>
                 <li><b>Master Universitario en Vision Artificial (URJC) 2021, 2020</b>: Augmented Reality in Urban Environments Seminar.&nbsp;
-                  <a href="https://youtu.be/zijWdXDjwb0"  target="_blank">video</a>,&nbsp;
-                  <a href={PosterSymposiumUPM} target="_blank">poster</a>
+                  <a href="https://youtu.be/zijWdXDjwb0"  target="_blank">video</a>
                 </li>
                 <li><b>2019: 9th Iberian Conference on Pattern Recognition and Image Analysis (IbPRIA)</b>: BELID: Boosted Efficient Local Image Descriptor.&nbsp;
                   <a href={SlidesIbPRIA18} target="_blank">slides</a>
@@ -255,19 +254,21 @@ function App () {
             </div>
             <br/>
 
-            <div>
+            <div id="awards-section">
               <h2>Honors and Awards</h2>
               <ul>
                 <li>Cum Laude PhD (Nov, 2021)</li>
                 <li>Best Student Paper Award of ibPRIA 2019</li>
                 <li>Best PhD Thesis Award in the ICT field of the Polytechnic University of Madrid (May, 2019), &nbsp;
-                  <a href="https://youtu.be/pJN94oZgqWY" target="_blank">video</a></li>
+                  <a href="https://youtu.be/pJN94oZgqWY" target="_blank">video</a>, &nbsp;
+                  <a href={PosterSymposiumUPM} target="_blank">poster</a>
+                </li>
                 <li>Primer Premio al mejor Trabajo Fin de Grado de Soft. Libre (November, 2015)</li>
               </ul>
             </div>
             <br/>
 
-            <div>
+            <div id="projects-section">
               <h2>Other Projects</h2>
               I am specially proud of the following companies/project:<br/><br/>
               <ul>
