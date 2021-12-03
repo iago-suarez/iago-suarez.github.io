@@ -8,11 +8,38 @@ import SlidesIbPRIA18 from './documents/Slides_IbPRIA19.pdf'
 import PosterSymposiumUPM from './documents/Poster_PhDSymposium19.pdf'
 import SlidesTFM from './documents/Slides_TFM_iago.pdf'
 import SlidesPhD from './documents/Slides_PhD_iago.pdf'
+import ImgELSED from './images/ELSED.jpg'
+import ImgFSG from './images/FsgIros18.gif'
+import ImgBelid from './images/BelidImg.png'
+import ImgBeblid from './images/BeblidImg.png'
+import ImgRAL21 from './images/ImgRAL21.gif'
 import VanishingPointsVideo from './videos/vanishing.mp4'
 import './App.css'
 import './Sidebar.css'
 import * as Icon from 'react-bootstrap-icons'
 import Carousel from 'react-bootstrap/Carousel'
+
+function Publication(props) {
+  //return <h1>Hello, {props.name}</h1>;
+  return <div className="card pub-card">
+    <div className="container-fluid">
+      <div className="row pub-row">
+        <div className="col-md-3">
+          <img src={props.img} className="card-img-top pub-image" alt="Publication image"></img>
+        </div>
+        <div className="col-md-9">
+          <p className="pub-text-title pub-text-p ">{props.name}</p>
+          <p className="pub-text-authors pub-text-p">{props.authors_year}</p>
+          <p className="pub-text-p">{props.venue}</p>
+          <p className="pub-text-p">
+            {props.links.map((tag, i) => <span key={i}> {i > 0 && "| "}
+              <a href={tag} target="_blank" rel="noreferrer">{tag}</a></span>)}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+}
 
 function App () {
   return (
@@ -87,51 +114,57 @@ function App () {
             <br/>
             <div id="publications-section">
               <h2>Publications</h2>
-              <ul>
-                <li>Suárez, I., Buenaposada, J. M., & Baumela, L. (2021). <b>ELSED: Enhanced Line SEgment Drawing</b>.
-                </li>
-                <a href="https://arxiv.org/abs/2108.03144">Paper</a>, &nbsp;
-                <a href="https://github.com/iago-suarez/ELSED">Source code</a> &nbsp;
-                <br/>
-                <li>Suárez, I., Buenaposada, J. M., & Baumela, L. (2021). <b>Revisiting Binary Local Image Description for Resource Limited Devices</b>.
-                   <i> IEEE Robotics and Automation Letters</i>, 6(4), 8317-8324.
-                </li>
-                <a href="https://arxiv.org/abs/2108.08380">Paper</a>, &nbsp;
-                <a href="https://github.com/iago-suarez/efficient-descriptors">Source code (C++)</a>, &nbsp;
-                <a href="https://doi.org/10.1109/LRA.2021.3107024">DOI</a>, &nbsp;
-                <a href="https://iago-suarez.com/efficient-descriptors">Project page</a>
-                <br/>
-                <li>Suárez, I., Sfeir, G., Buenaposada, J. M., & Baumela, L. (2020). <b>BEBLID: Boosted efficient binary
-                  local image descriptor</b>.
-                  <i>Pattern Recognition Letters</i>, 133, 366-372.
-                </li>
-                <a href="http://www.dia.fi.upm.es/~pcr/publications/PRL_2020_web_BEBLID.pdf">Paper</a>, &nbsp;
-                <a href="https://github.com/iago-suarez/BEBLID">Source code (C++)</a>, &nbsp;
-                <a
-                  href="https://towardsdatascience.com/improving-your-image-matching-results-by-14-with-one-line-of-code-b72ae9ca2b73">Python
-                  OpenCV Tutorial</a>, &nbsp;
-                <a href="https://doi.org/10.1016/j.patrec.2020.04.005">DOI</a>
-                <br/>
-                <li>Suárez, I., Sfeir, G., Buenaposada, J. M., & Baumela, L. (2019, July). <b>BELID: Boosted efficient
-                  local image descriptor</b>. In
-                  <i>Iberian Conference on Pattern Recognition and Image Analysis</i> (pp. 449-460). Springer, Cham.
-                </li>
-                <a href="http://www.dia.fi.upm.es/~pcr/publications/PRL_2020_web_BEBLID.pdf">Paper</a>, &nbsp;
-                <a href="https://doi.org/10.1007/978-3-030-31332-6_39">DOI</a>, &nbsp;
-                <a href="https://www.youtube.com/watch?v=RknriYhmeUI">Video</a>
-                <br/>
-                <li>Suárez, I., Muñoz, E., Buenaposada, J. M., & Baumela, L. (2018, October).
-                  <b>FSG: A statistical approach to line detection via fast segments grouping</b>. In
-                  <i>2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</i> (pp. 97-102).
-                  IEEE.
-                </li>
-                <a href="https://raw.githubusercontent.com/graffter/fsg-benchmark/master/fsg-paper.pdf">Paper</a>, &nbsp;
-                <a href="https://github.com/iago-suarez/FSG">Source code (C++)</a>, &nbsp;
-                <a href="https://doi.org/10.1109/IROS.2018.8594434">DOI</a>, &nbsp;
-                <a href="https://github.com/graffter/fsg-benchmark">Dataset</a>, &nbsp;
-                <a href="https://www.youtube.com/watch?v=RknriYhmeUI">Video</a>
-                <br/>
-              </ul>
+
+              <Publication name="ELSED: Enhanced Line SEgment Drawing"
+                           img={ImgELSED}
+                           authors_year="Suárez, I., Buenaposada, J. M., & Baumela, L. (2021)"
+                           venue="Under review"
+                           links={[
+                             <a href="https://arxiv.org/abs/2108.03144">Paper</a>,
+                             <a href="https://github.com/iago-suarez/ELSED">Code (C++)</a>
+                           ]}/>
+
+              <Publication name="Revisiting Binary Local Image Description for Resource Limited Devices"
+                           img={ImgRAL21}
+                           authors_year="Suárez, I., Buenaposada, J. M., & Baumela, L. (2021)"
+                           venue={<span><i> IEEE Robotics and Automation Letters</i>, 6(4), 8317-8324.</span>}
+                           links={[
+                             <a href="https://arxiv.org/abs/2108.08380">Paper</a>,
+                             <a href="https://github.com/iago-suarez/efficient-descriptors">Code (C++)</a>,
+                             <a href="https://doi.org/10.1109/LRA.2021.3107024">DOI</a>,
+                             <a href="https://iago-suarez.com/efficient-descriptors">Project page</a>,
+                             <a href="https://youtu.be/3WxjxPjDGSQ">Video</a>
+                           ]}/>
+
+              <Publication name="BEBLID: Boosted efficient binary local image descriptor"
+                           img={ImgBeblid}
+                           authors_year="Suárez, I., Sfeir, G., Buenaposada, J. M., & Baumela, L. (2020)."
+                           venue={<span><i>Pattern Recognition Letters</i>, 133, 366-372.</span>}
+                           links={[
+                             <a href="http://www.dia.fi.upm.es/~pcr/publications/PRL_2020_web_BEBLID.pdf">Paper</a>,
+                             <a href="https://github.com/iago-suarez/BEBLID">Code (C++)</a>,
+                             <a href="https://towardsdatascience.com/improving-your-image-matching-results-by-14-with-one-line-of-code-b72ae9ca2b73">Python OpenCV Tutorial</a>,
+                             <a href="https://doi.org/10.1016/j.patrec.2020.04.005">DOI</a>
+                           ]}/>
+              <Publication name="BELID: Boosted efficient local image descriptor"
+                           img={ImgBelid}
+                           authors_year="Suárez, I., Sfeir, G., Buenaposada, J. M., & Baumela, L. (2019, July)"
+                           venue={<span><i>Iberian Conference on Pattern Recognition and Image Analysis</i> (pp. 449-460).</span>}
+                           links={[
+                             <a href="http://www.dia.fi.upm.es/~pcr/publications/ibpria2019.pdf">Paper</a>,
+                             <a href="https://doi.org/10.1007/978-3-030-31332-6_39">DOI</a>
+                           ]}/>
+              <Publication name="FSG: A statistical approach to line detection via fast segments grouping"
+                           img={ImgFSG}
+                           authors_year="Suárez, I., Muñoz, E., Buenaposada, J. M., & Baumela, L. (2018, October)"
+                           venue={<span><i>Iberian Conference on Pattern Recognition and Image Analysis</i> (pp. 449-460).</span>}
+                           links={[
+                             <a href="http://www.dia.fi.upm.es/~pcr/publications/iros2018.pdf">Paper</a>,
+                             <a href="https://github.com/iago-suarez/FSG">Code (C++)</a>,
+                             <a href="https://doi.org/10.1109/IROS.2018.8594434">DOI</a>,
+                             <a href="https://github.com/graffter/fsg-benchmark">Dataset</a>,
+                             <a href="https://www.youtube.com/watch?v=RknriYhmeUI">Video</a>
+                           ]}/>
             </div>
             <br/>
 

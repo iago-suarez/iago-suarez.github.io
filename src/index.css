@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.pub-image-cell {
+  /*max-width: 300px;*/
+}
+
+.pub-image {
+  max-height: 120px;
+  object-fit: contain;
+}
+
+.pub-text-p {
+  margin-bottom: 8px;
+  line-height: 1.1rem;
+}
+
+.pub-text-title {
+  font-weight: 550;
+}
+
+.pub-row {
+  padding: 7px;
+  margin: 2px;
+}
+
+.pub-card {
+  margin: 7px;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
