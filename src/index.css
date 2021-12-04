@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+.vcenter-item{
+  display: flex;
+  align-items: center;
+}
+
 .pub-image-cell {
   /*max-width: 300px;*/
 }
@@ -27,6 +32,7 @@ code {
 }
 
 .pub-text-title {
+  margin-top: 10px;
   font-weight: 550;
 }
 
@@ -45,4 +51,10 @@ code {
 
   display: flex;
   align-items: center;
+}
+
+.social-icon{
+  text-indent: 0px;
+  text-align: center;
+  padding: 5px;
 }

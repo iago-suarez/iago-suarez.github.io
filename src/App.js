@@ -24,7 +24,7 @@ function Publication(props) {
   return <div className="card pub-card">
     <div className="container-fluid">
       <div className="row pub-row">
-        <div className="col-md-3">
+        <div className="col-md-3 vcenter-item">
           <img src={props.img} className="card-img-top pub-image" alt="Publication image"></img>
         </div>
         <div className="col-md-9">
@@ -33,7 +33,9 @@ function Publication(props) {
           <p className="pub-text-p">{props.venue}</p>
           <p className="pub-text-p">
             {props.links.map((tag, i) => <span key={i}> {i > 0 && "| "}
-              <a href={tag} target="_blank" rel="noreferrer">{tag}</a></span>)}
+              <a href={tag.props.href} target="_blank" rel="noreferrer">{tag.props.children}</a>
+            </span>)
+            }
           </p>
         </div>
       </div>
@@ -64,10 +66,24 @@ function App () {
               <a href="#projects-section">Projects</a>
             </li>
             <li>
-              <a className="medium-icon col-sm" href="https://www.linkedin.com/in/iago-suarez/"><Icon.Linkedin/></a>
-              <a className="medium-icon col-sm" href="https://github.com/iago-suarez"><Icon.Github/></a>
-              <a className="medium-icon col-sm"
-                 href="https://scholar.google.es/citations?user=6CRh05wAAAAJ&hl=es&oi=ao"><Icon.Book/></a>
+              <div className="container">
+                <div className="row">
+                  <div className="col-sm">
+                    <a className="medium-icon social-icon" href="https://github.com/iago-suarez"><Icon.Github/></a>
+                  </div>
+                  <div className="col-sm">
+                    <a className="medium-icon social-icon"
+                       href="https://scholar.google.es/citations?user=6CRh05wAAAAJ&hl=es&oi=ao"><Icon.Book/></a>
+                  </div>
+                  <div className="col-sm">
+                    <a className="medium-icon social-icon"
+                       href="https://twitter.com/IagoSuarez0"><Icon.Twitter/></a>
+                  </div>
+                  <div className="col-sm">
+                    <a className="medium-icon social-icon" href="https://www.linkedin.com/in/iago-suarez/"><Icon.Linkedin/></a>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
