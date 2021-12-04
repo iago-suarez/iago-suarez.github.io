@@ -165,7 +165,7 @@ function App () {
               <Publication name="BELID: Boosted efficient local image descriptor"
                            img={ImgBelid}
                            authors_year="Suárez, I., Sfeir, G., Buenaposada, J. M., & Baumela, L. (2019, July)"
-                           venue={<span><i>Iberian Conference on Pattern Recognition and Image Analysis</i> (pp. 449-460).</span>}
+                           venue={<span><i>Iberian Conference on Pattern Recognition and Image Analysis (IbPRIA)</i> (pp. 449-460).</span>}
                            links={[
                              <a href="http://www.dia.fi.upm.es/~pcr/publications/ibpria2019.pdf">Paper</a>,
                              <a href="https://doi.org/10.1007/978-3-030-31332-6_39">DOI</a>
@@ -173,7 +173,7 @@ function App () {
               <Publication name="FSG: A statistical approach to line detection via fast segments grouping"
                            img={ImgFSG}
                            authors_year="Suárez, I., Muñoz, E., Buenaposada, J. M., & Baumela, L. (2018, October)"
-                           venue={<span><i>Iberian Conference on Pattern Recognition and Image Analysis</i> (pp. 449-460).</span>}
+                           venue={<span><i>International Conference on Intelligent Robots and Systems (IROS)</i> (pp. 97-102).</span>}
                            links={[
                              <a href="http://www.dia.fi.upm.es/~pcr/publications/iros2018.pdf">Paper</a>,
                              <a href="https://github.com/iago-suarez/FSG">Code (C++)</a>,
