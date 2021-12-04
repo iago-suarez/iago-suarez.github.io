@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.51a0f4ce.chunk.css",
-    "main.js": "/static/js/main.cf7bf90c.chunk.js",
-    "main.js.map": "/static/js/main.cf7bf90c.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.14a1c503.js",
-    "runtime-main.js.map": "/static/js/runtime-main.14a1c503.js.map",
+    "main.css": "/static/css/main.a20f19c0.chunk.css",
+    "main.js": "/static/js/main.e4bda063.chunk.js",
+    "main.js.map": "/static/js/main.e4bda063.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1c42a63f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1c42a63f.js.map",
     "static/css/2.6e86b593.chunk.css": "/static/css/2.6e86b593.chunk.css",
-    "static/js/2.f148eced.chunk.js": "/static/js/2.f148eced.chunk.js",
-    "static/js/2.f148eced.chunk.js.map": "/static/js/2.f148eced.chunk.js.map",
-    "static/js/3.5b2c0be9.chunk.js": "/static/js/3.5b2c0be9.chunk.js",
-    "static/js/3.5b2c0be9.chunk.js.map": "/static/js/3.5b2c0be9.chunk.js.map",
+    "static/js/2.be6f96ff.chunk.js": "/static/js/2.be6f96ff.chunk.js",
+    "static/js/2.be6f96ff.chunk.js.map": "/static/js/2.be6f96ff.chunk.js.map",
+    "static/js/3.3021521b.chunk.js": "/static/js/3.3021521b.chunk.js",
+    "static/js/3.3021521b.chunk.js.map": "/static/js/3.3021521b.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.6e86b593.chunk.css.map": "/static/css/2.6e86b593.chunk.css.map",
-    "static/css/main.51a0f4ce.chunk.css.map": "/static/css/main.51a0f4ce.chunk.css.map",
-    "static/js/2.f148eced.chunk.js.LICENSE.txt": "/static/js/2.f148eced.chunk.js.LICENSE.txt",
-    "static/media/BeblidImg.4b5c398a.png": "/static/media/BeblidImg.4b5c398a.png",
+    "static/css/main.a20f19c0.chunk.css.map": "/static/css/main.a20f19c0.chunk.css.map",
+    "static/js/2.be6f96ff.chunk.js.LICENSE.txt": "/static/js/2.be6f96ff.chunk.js.LICENSE.txt",
+    "static/media/BeblidImg.5b8c713a.png": "/static/media/BeblidImg.5b8c713a.png",
     "static/media/BelidImg.c824f410.png": "/static/media/BelidImg.c824f410.png",
     "static/media/ELSED.d0fd4701.jpg": "/static/media/ELSED.d0fd4701.jpg",
     "static/media/FeatureDescription.f1032098.jpg": "/static/media/FeatureDescription.f1032098.jpg",
@@ -32,10 +32,10 @@
     "static/media/vanishing.c8392133.mp4": "/static/media/vanishing.c8392133.mp4"
   },
   "entrypoints": [
-    "static/js/runtime-main.14a1c503.js",
+    "static/js/runtime-main.1c42a63f.js",
     "static/css/2.6e86b593.chunk.css",
-    "static/js/2.f148eced.chunk.js",
-    "static/css/main.51a0f4ce.chunk.css",
-    "static/js/main.cf7bf90c.chunk.js"
+    "static/js/2.be6f96ff.chunk.js",
+    "static/css/main.a20f19c0.chunk.css",
+    "static/js/main.e4bda063.chunk.js"
   ]
 }
