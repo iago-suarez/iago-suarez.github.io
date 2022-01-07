@@ -58,3 +58,27 @@ code {
   text-align: center;
   padding: 5px;
 }
+
+.bg-middle-gray {
+  background: #dddddd;
+}
+
+.color-blue {
+  color: #0000ff;
+}
+
+.color-green {
+  color: #00aa00;
+}
+
+.color-magenta {
+  color: #ee00ee;
+}
+
+.color-gray {
+  color: #888888;
+}
+
+.color-orange {
+  color: #EF7F1A;
+}
