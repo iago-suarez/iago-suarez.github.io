@@ -137,7 +137,8 @@ function Home () {
                            venue="Under review"
                            links={[
                              <a href="https://arxiv.org/abs/2108.03144">Paper</a>,
-                             <a href="https://github.com/iago-suarez/ELSED">Code (C++)</a>
+                             <a href="https://github.com/iago-suarez/ELSED">Code (C++)</a>,
+                             <a href="/elsed">Project page</a>
                            ]}/>
 
               <Publication name="Revisiting Binary Local Image Description for Resource Limited Devices"

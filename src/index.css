@@ -82,3 +82,7 @@ code {
 .color-orange {
   color: #EF7F1A;
 }
+
+.blue-shadow {
+  box-shadow: 0 1rem 3rem rgb(180 220 255) !important
+}
