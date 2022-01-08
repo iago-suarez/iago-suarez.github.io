@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.28807298.css",
-    "main.js": "/static/js/main.f64c96e1.js",
+    "main.css": "/static/css/main.91b34cc4.css",
+    "main.js": "/static/js/main.3d29c9bf.js",
     "static/js/787.93b0a6bc.chunk.js": "/static/js/787.93b0a6bc.chunk.js",
     "static/media/vanishing.mp4": "/static/media/vanishing.c8392133d85dbb195b84.mp4",
     "static/media/Slides_IROS18.pdf": "/static/media/Slides_IROS18.83669e7002e92960b943.pdf",
@@ -22,12 +22,12 @@
     "static/media/mypicture.jpg": "/static/media/mypicture.55c0820056d403e4d060.jpg",
     "index.html": "/index.html",
     "static/media/elsed-citation.txt": "/static/media/elsed-citation.fafaf88088da67cd1427.txt",
-    "main.28807298.css.map": "/static/css/main.28807298.css.map",
-    "main.f64c96e1.js.map": "/static/js/main.f64c96e1.js.map",
+    "main.91b34cc4.css.map": "/static/css/main.91b34cc4.css.map",
+    "main.3d29c9bf.js.map": "/static/js/main.3d29c9bf.js.map",
     "787.93b0a6bc.chunk.js.map": "/static/js/787.93b0a6bc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.28807298.css",
-    "static/js/main.f64c96e1.js"
+    "static/css/main.91b34cc4.css",
+    "static/js/main.3d29c9bf.js"
   ]
 }
