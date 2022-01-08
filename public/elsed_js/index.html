@@ -17,8 +17,16 @@
 
     <div class="row demo-legend">
         <div class="col-6 file-input-container">
-            <label for="fileInput">Input Image:</label>
-            <input type="file" id="fileInput" name="file" accept="image/*">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupFileAddon01">Input Image:</span>
+                </div>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="fileInput" aria-describedby="inputGroupFileAddon01">
+                    <label class="custom-file-label" for="fileInput">Choose file</label>
+                </div>
+            </div>
+
         </div>
         <div class="col-6">
             <div class="row">
