@@ -86,3 +86,7 @@ code {
 .blue-shadow {
   box-shadow: 0 1rem 3rem rgb(180 220 255) !important
 }
+
+.code-like-font {
+  font-family: monospace;
+}

@@ -1,9 +1,10 @@
 import React from 'react'
 import ElsedHeader from '../images/ElsedHeader.jpg'
 import CitationText from '../documents/elsed-citation.txt';
+import * as Icon from 'react-bootstrap-icons'
+import ReactDOM from 'react-dom'
 
 const Elsed = () => {
-
   return (
     <div className="App">
       <br/>
@@ -13,13 +14,19 @@ const Elsed = () => {
         </div>
         <div className="row text-center">
           <div className="col-sm">
-            <u>Iago Suárez</u>
+            <u><a href="/" className="text-dark link-dark" target="_blank" rel="noreferrer">
+              Iago Suárez
+            </a></u>
           </div>
           <div className="col-sm">
-            <u>José Miguel Buenaposada</u>
+            <u><a href="https://jmbuena.github.io/" className="text-dark link-dark" target="_blank" rel="noreferrer">
+              José Miguel Buenaposada
+            </a></u>
           </div>
           <div className="col-sm">
-            <u>Luis Baumela</u>
+            <u><a href="http://www.dia.fi.upm.es/~lbaumela/" className="text-dark link-dark" target="_blank" rel="noreferrer">
+              Luis Baumela
+            </a></u>
           </div>
         </div>
         <div className="row text-center">
@@ -39,14 +46,23 @@ const Elsed = () => {
 
         <div className="row text-center">
           <div className="col-sm">
-            <a href="https://arxiv.org/abs/2108.03144" target="_blank" rel="noreferrer">Paper</a>
+            <a href="https://arxiv.org/abs/2108.03144" target="_blank" rel="noreferrer">
+              <div>Paper</div>
+              <div className="medium-icon social-icon"><Icon.Book/></div>
+            </a>
           </div>
           <div className="col-sm">
-            <a href="https://github.com/iago-suarez/ELSED" target="_blank" rel="noreferrer">Source Code (C++)</a>
+            <a href="https://github.com/iago-suarez/ELSED" target="_blank" rel="noreferrer">
+              <div>Source Code (C++)</div>
+              <div className="medium-icon social-icon"><Icon.Github/></div></a>
+
           </div>
           <div className="col-sm">
             <a href="https://colab.research.google.com/github/iago-suarez/ELSED/blob/main/Python_ELSED.ipynb"
-               target="_blank" rel="noreferrer">Colab Python demo</a>
+               target="_blank" rel="noreferrer">
+              <div>Colab Python demo</div>
+              <div className="medium-icon social-icon"><Icon.Code/></div>
+            </a>
           </div>
         </div>
         <br/><br/>
@@ -59,7 +75,7 @@ const Elsed = () => {
 
         <div>
           <h3>Online Demo</h3>
-          <p>Sin ELSED is extremely efficient, it can run in your browser effortlessly using Web Assembly.
+          <p>Since ELSED is extremely efficient, it can run in your browser effortlessly using Web Assembly.
             More info in <a href="TODO" target="_blank" rel="noreferrer">this post</a>.</p>
           <div className="blue-shadow card p-3 mb-5 bg-white rounded">
           <iframe className="mw-100" width="110%" height="520" src="/elsed_js/index.html"
@@ -117,15 +133,21 @@ const Elsed = () => {
           </div>
         </div>
         <br/>
-        {/*<div>*/}
-        {/*  <h4>Citation</h4>*/}
-        {/*  <div className="card">*/}
-        {/*    <div className="card-body">               */}
-        {/*    </div>*/}
-        {/*  </div>*/}
-        {/*</div>*/}
-
+        <div>
+          <h4>Citation</h4>
+          <div className="card">
+            <div className="card-body code-like-font">
+              {"@article{suarez2021elsed,"} <br/>
+              &nbsp; {"  title={ELSED: Enhanced Line SEgment Drawing}," } <br/>
+              &nbsp; {"  author={Su{\\'a}rez, Iago and Buenaposada, Jos{\\'e} M and Baumela, Luis}," } <br/>
+              &nbsp; {"  journal={arXiv preprint arXiv:2108.03144},\n" } <br/>
+              &nbsp; {"  year={2021}\n" } <br/>
+              {"}"}
+            </div>
+          </div>
+        </div>
       </div>
+      <br/>
     </div>
   )
 }
