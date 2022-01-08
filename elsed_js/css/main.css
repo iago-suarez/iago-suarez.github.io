@@ -1,0 +1,21 @@
+.range-label{
+    /*margin-left: 15px;*/
+}
+.range-selector{
+    /*margin-left: 5px;*/
+    width: 80px;
+}
+
+.range-selector-container {
+    /*padding: 0;*/
+    text-align: left;
+}
+
+.demo-legend{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.file-input-container{
+    padding-top: 8px;
+}
