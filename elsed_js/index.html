@@ -17,16 +17,11 @@
 
     <div class="row demo-legend">
         <div class="col-6 file-input-container">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroupFileAddon01">Input Image:</span>
-                </div>
-                <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="fileInput" aria-describedby="inputGroupFileAddon01">
-                    <label class="custom-file-label" for="fileInput">Choose file</label>
-                </div>
-            </div>
-
+        <span id="inputGroupFileAddon01">Input Image:</span>
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="fileInput" aria-describedby="inputGroupFileAddon01">
+            <label class="custom-file-label" for="fileInput">Choose file</label>
+        </div>
         </div>
         <div class="col-6">
             <div class="row">
@@ -44,7 +39,7 @@
                 </div>
                 <div class="col-lg-6 range-selector-container">
 
-                    <label for="JumpSizeInput" class="range-label form-label">Jump Size: </label>
+                    <label for="JumpSizeInput" class="range-label form-label"># Jumps: </label>
                     <input id="JumpSizeInput" type="range" class="range-selector form-range" value="3" min="0" max="5">
                     &nbsp;<output>3</output>
                 </div>
