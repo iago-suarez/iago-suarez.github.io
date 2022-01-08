@@ -78,7 +78,7 @@ const Elsed = () => {
           <p>Since ELSED is extremely efficient, it can run in your browser effortlessly using Web Assembly.
             More info in <a href="TODO" target="_blank" rel="noreferrer">this post</a>.</p>
           <div className="blue-shadow card p-3 mb-5 bg-white rounded">
-          <iframe className="mw-100" width="110%" height="520" src="/elsed_js/index.html"
+          <iframe className="mw-100" width="110%" height="480" src="/elsed_js/index.html"
                   title="ELSED Online demo" frameBorder="0"/>
           </div>
         </div>

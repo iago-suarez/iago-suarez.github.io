@@ -21,7 +21,7 @@ function addFileInputHandler(fileInputId, canvasId) {
         let files = e.target.files;
         if (files.length > 0) {
             let imgUrl = URL.createObjectURL(files[0]);
-            loadImageToCanvas(imgUrl, canvasId).then(() => $('#tryIt').click());
+            loadImageToCanvas(imgUrl, canvasId).then(process_image);
         }
     }, false);
 }
@@ -33,6 +33,7 @@ function getImgData(canvas_id) {
 }
 
 let Elsed;
+
 function load_emscripten() {
     return new Promise(resolve => {
         Module['onRuntimeInitialized'] = () => {
@@ -41,7 +42,7 @@ function load_emscripten() {
                 version: Module.cwrap('version', 'string', []),
                 create_buffer: Module.cwrap('create_buffer', 'number', ['number', 'number']),
                 destroy_buffer: Module.cwrap('destroy_buffer', '', ['number']),
-                process_frame: Module.cwrap('process_frame', 'number', ['number', 'number', 'number']),
+                process_frame: Module.cwrap('process_frame', 'number', ['number', 'number', 'number', 'number', 'number', 'number', 'number']),
             };
             console.log("Emscripten ELSED Wrapper version: " + Elsed.version());
             resolve()
@@ -49,14 +50,22 @@ function load_emscripten() {
     })
 }
 
-function process_image(image) {
+function process_image() {
+    // Get image data from input canvas
+    const image = getImgData('canvasInput')
+
     // Allocate a C++ memory buffer to store an image of size w x h
     const p = Elsed.create_buffer(image.width, image.height);
     // Copy te value of the input image to the buffer
     Module.HEAP8.set(image.data, p);
 
+    const gradTh = parseInt($('#GradientThInput').val())
+    const valTh = parseFloat($('#ValidationThInput').val())
+    const jumpSize = parseInt($('#JumpSizeInput').val())
+    const nJumpChecks = parseInt($('#nSegmentsInput').val())
+
     // Process frame with C++ code
-    const pResults = Elsed.process_frame(p, image.width, image.height);
+    const pResults = Elsed.process_frame(p, image.width, image.height, gradTh, valTh, jumpSize, nJumpChecks);
 
     // pResults is a buffer containing an image of input size. Convert it to Javascript classes
     const resultView = new Uint8Array(Module.HEAP8.buffer, pResults, image.data.length);
@@ -65,7 +74,13 @@ function process_image(image) {
     Elsed.destroy_buffer(pResults);
     Elsed.destroy_buffer(p);
 
-    return result;
+    // Draw the resulting image in the output canvas
+    const canvas = document.getElementById('canvasOutput')
+    const ctx = canvas.getContext("2d")
+    ctx.canvas.width = image.width
+    ctx.canvas.height = image.height
+    const resultingImage = new ImageData(result, image.width, image.height);
+    ctx.putImageData(resultingImage, 0, 0);
 }
 
 $(document).ready(() => {
@@ -75,23 +90,10 @@ $(document).ready(() => {
 
     const emscripten_loaded = load_emscripten()
 
-    Promise.all([image_loaded, emscripten_loaded]).then(() => {
-        const run_button = $('#tryIt');
-        run_button.click(() => {
-            // Get image data from input canvas
-            const image = getImgData('canvasInput')
+    Promise.all([image_loaded, emscripten_loaded]).then(process_image)
 
-            // Process image with C++ code (WebAssembly)
-            const result = process_image(image)
-
-            // Draw the resulting image in the output canvas
-            const canvas = document.getElementById('canvasOutput')
-            const ctx = canvas.getContext("2d")
-            ctx.canvas.width = image.width
-            ctx.canvas.height = image.height
-            const resultingImage = new ImageData(result, image.width, image.height);
-            ctx.putImageData(resultingImage, 0, 0);
-        })
-        run_button.click()
+    $('.range-selector').on('input', (e) => {
+        e.currentTarget.nextElementSibling.value = e.currentTarget.value
+        process_image()
     })
 })
