@@ -5,9 +5,19 @@ function loadImageToCanvas(url, cavansId) {
         let img = new Image();
         img.crossOrigin = 'anonymous';
         img.addEventListener('load', () => {
-            canvas.width = img.width;
-            canvas.height = img.height;
-            ctx.drawImage(img, 0, 0, img.width, img.height);
+            const MAX_SIZE = 1024;
+            const bigger_dim = Math.max(img.width, img.height)
+            const scale =  bigger_dim > MAX_SIZE ? (MAX_SIZE / bigger_dim) : 1;
+            canvas.width = Math.round(scale * img.width);
+            canvas.height = Math.round(scale * img.height);
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+            // Show as many segments as possible (Max=1000)
+            const nSegsInput = $('#nSegmentsInput')
+            nSegsInput.attr('max', 1000)
+            nSegsInput.val(1000)
+            nSegsInput.next().text(nSegsInput.val());
+
             resolve(img);
         });
         img.addEventListener('error', (err) => reject(err));
@@ -42,7 +52,7 @@ function load_emscripten() {
                 version: Module.cwrap('version', 'string', []),
                 create_buffer: Module.cwrap('create_buffer', 'number', ['number', 'number']),
                 destroy_buffer: Module.cwrap('destroy_buffer', '', ['number']),
-                process_frame: Module.cwrap('process_frame', 'number', ['number', 'number', 'number', 'number', 'number', 'number', 'number']),
+                process_frame: Module.cwrap('process_frame', 'number', ['number', 'number', 'number', 'number', 'number', 'number', 'number', 'number']),
             };
             console.log("Emscripten ELSED Wrapper version: " + Elsed.version());
             resolve()
@@ -55,9 +65,10 @@ function process_image() {
     const image = getImgData('canvasInput')
 
     // Allocate a C++ memory buffer to store an image of size w x h
-    const p = Elsed.create_buffer(image.width, image.height);
+    const pInput = Elsed.create_buffer(image.width, image.height);
+    const pOutput = Elsed.create_buffer(image.width, image.height);
     // Copy te value of the input image to the buffer
-    Module.HEAP8.set(image.data, p);
+    Module.HEAP8.set(image.data, pInput);
 
     const gradTh = parseInt($('#GradientThInput').val())
     const valTh = parseFloat($('#ValidationThInput').val())
@@ -65,14 +76,18 @@ function process_image() {
     const nJumpChecks = parseInt($('#nSegmentsInput').val())
 
     // Process frame with C++ code
-    const pResults = Elsed.process_frame(p, image.width, image.height, gradTh, valTh, jumpSize, nJumpChecks);
+    const nSegments = Elsed.process_frame(pInput, pOutput, image.width, image.height, gradTh, valTh, jumpSize, nJumpChecks);
+    const nSegsInput = $('#nSegmentsInput')
+    nSegsInput.attr('max', nSegments)
+    nSegsInput.val(Math.min(nSegments, nSegsInput.val()))
+    nSegsInput.next().text(nSegsInput.val());
 
     // pResults is a buffer containing an image of input size. Convert it to Javascript classes
-    const resultView = new Uint8Array(Module.HEAP8.buffer, pResults, image.data.length);
+    const resultView = new Uint8Array(Module.HEAP8.buffer, pOutput, image.data.length);
     const result = Uint8ClampedArray.from(resultView);
     // Free dynamic memory allocated by C++
-    Elsed.destroy_buffer(pResults);
-    Elsed.destroy_buffer(p);
+    Elsed.destroy_buffer(pOutput);
+    Elsed.destroy_buffer(pInput);
 
     // Draw the resulting image in the output canvas
     const canvas = document.getElementById('canvasOutput')
