@@ -16,48 +16,39 @@ const Elsed = () => {
           <div className="col-sm">
             <u><a href="/" className="text-dark link-dark" target="_blank" rel="noreferrer">
               Iago Suárez
-            </a></u>
+            </a></u><br/>
+            Universidad Politécnica de Madrid<br/>
+            The Graffter S.L.
           </div>
           <div className="col-sm">
             <u><a href="https://jmbuena.github.io/" className="text-dark link-dark" target="_blank" rel="noreferrer">
               José Miguel Buenaposada
-            </a></u>
+            </a></u><br/>
+            Universidad Rey Juan Carlos
           </div>
           <div className="col-sm">
             <u><a href="http://www.dia.fi.upm.es/~lbaumela/" className="text-dark link-dark" target="_blank" rel="noreferrer">
               Luis Baumela
             </a></u>
+            <br/>Universidad Politécnica de Madrid
           </div>
         </div>
-        <div className="row text-center">
-          <div className="col-sm">
-            Universidad Politécnica de Madrid<br/>
-            The Graffter S.L.
-          </div>
-          <div className="col-sm">
-            Universidad Rey Juan Carlos
-          </div>
-          <div className="col-sm">
-            Universidad Politécnica de Madrid
-          </div>
-        </div>
-
         <br/>
 
         <div className="row text-center">
-          <div className="col-sm">
+          <div className="col-4">
             <a href="https://arxiv.org/abs/2108.03144" target="_blank" rel="noreferrer">
               <div>Paper</div>
               <div className="medium-icon social-icon"><Icon.Book/></div>
             </a>
           </div>
-          <div className="col-sm">
+          <div className="col-4">
             <a href="https://github.com/iago-suarez/ELSED" target="_blank" rel="noreferrer">
               <div>Source Code (C++)</div>
               <div className="medium-icon social-icon"><Icon.Github/></div></a>
 
           </div>
-          <div className="col-sm">
+          <div className="col-4">
             <a href="https://colab.research.google.com/github/iago-suarez/ELSED/blob/main/Python_ELSED.ipynb"
                target="_blank" rel="noreferrer">
               <div>Colab Python demo</div>
@@ -65,7 +56,7 @@ const Elsed = () => {
             </a>
           </div>
         </div>
-        <br/><br/>
+        <br/>
 
         <div>
           <img className="w-100" src={ElsedHeader}/>
