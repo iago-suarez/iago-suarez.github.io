@@ -1,6 +1,0 @@
-@article{suarez2021elsed,
-  title={ELSED: Enhanced Line SEgment Drawing},
-  author={Su{\'a}rez, Iago and Buenaposada, Jos{\'e} M and Baumela, Luis},
-  journal={arXiv preprint arXiv:2108.03144},
-  year={2021}
-}
