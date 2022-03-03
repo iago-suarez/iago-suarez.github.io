@@ -9,6 +9,8 @@ const Elsed = () => {
       <div className="container">
         <div className="mx-auto text-center">
           <h2>ELSED: Enhanced Line SEgment Drawing</h2>
+          <h5><a href="https://doi.org/10.1016/j.patcog.2022.108619"
+                 className="link-dark" target="_blank" rel="noreferrer">Pattern Recognition</a></h5>
         </div>
         <div className="row text-center">
           <div className="col-sm">
@@ -129,11 +131,11 @@ const Elsed = () => {
           <h4>Citation</h4>
           <div className="card">
             <div className="card-body code-like-font">
-              {'@article{suarez2021elsed,'} <br/>
+              {'@article{suarez2022elsed,'} <br/>
               &nbsp; {'  title={ELSED: Enhanced Line SEgment Drawing},'} <br/>
               &nbsp; {'  author={Su{\\\'a}rez, Iago and Buenaposada, Jos{\\\'e} M and Baumela, Luis},'} <br/>
-              &nbsp; {'  journal={arXiv preprint arXiv:2108.03144},\n'} <br/>
-              &nbsp; {'  year={2021}\n'} <br/>
+              &nbsp; {'  journal={Pattern Recognition},\n'} <br/>
+              &nbsp; {'  year={2022}\n'} <br/>
               {'}'}
             </div>
           </div>

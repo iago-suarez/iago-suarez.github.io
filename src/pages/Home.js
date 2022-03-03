@@ -125,7 +125,9 @@ function Home () {
                 presented in symposiums and journals. I also contribute to important libraries such as OpenCV.</p>
               <p>In business, among a large list of projects I would like to highlight my contributions in The Graffter,
                 where I developed Augmented Reality technology for urban environment and XOIA Software Development, a
-                company that I have co-founded and nowadays has more than 10 employees.</p>
+                company that I have co-founded and nowadays has more than 10 employees.
+                At the moment, I lead the CV team of New Horizon Technologies. We develop several projects about video
+                surveillance, CV for sports, and medical image analysis.</p>
             </div>
             <br/>
             <div id="publications-section">
@@ -133,11 +135,12 @@ function Home () {
 
               <Publication name="ELSED: Enhanced Line SEgment Drawing"
                            img={ImgELSED}
-                           authors_year="Suárez, I., Buenaposada, J. M., & Baumela, L. (2021)"
-                           venue="Under review"
+                           authors_year="Suárez, I., Buenaposada, J. M., & Baumela, L. (2022)"
+                           venue="Pattern Recognition, advance online publication"
                            links={[
                              <a href="https://arxiv.org/abs/2108.03144">Paper</a>,
                              <a href="https://github.com/iago-suarez/ELSED">Code (C++)</a>,
+                             <a href="https://doi.org/10.1016/j.patcog.2022.108619">DOI</a>,
                              <a href="/elsed">Project page</a>
                            ]}/>
 
