@@ -38,7 +38,7 @@ const Elsed = () => {
 
         <div className="row text-center">
           <div className="col-4">
-            <a href="https://arxiv.org/abs/2108.03144" target="_blank" rel="noreferrer">
+            <a href="https://www.sciencedirect.com/science/article/pii/S0031320322001005/pdfft?md5=30d73760c68b632196efe2f0a1745a94&pid=1-s2.0-S0031320322001005-main.pdf" target="_blank" rel="noreferrer">
               <div>Paper</div>
               <div className="medium-icon social-icon"><Icon.Book/></div>
             </a>
@@ -135,7 +135,12 @@ const Elsed = () => {
               &nbsp; {'  title={ELSED: Enhanced Line SEgment Drawing},'} <br/>
               &nbsp; {'  author={Su{\\\'a}rez, Iago and Buenaposada, Jos{\\\'e} M and Baumela, Luis},'} <br/>
               &nbsp; {'  journal={Pattern Recognition},\n'} <br/>
+              &nbsp; {'  volume={127},\n'} <br/>
+              &nbsp; {'  pages={108619},\n'} <br/>
               &nbsp; {'  year={2022}\n'} <br/>
+              &nbsp; {'  issn={0031-3203},\n'} <br/>
+              &nbsp; {'  doi={https://doi.org/10.1016/j.patcog.2022.108619},\n'} <br/>
+              &nbsp; {'  url={https://www.sciencedirect.com/science/article/pii/S0031320322001005}\n'} <br/>
               {'}'}
             </div>
           </div>

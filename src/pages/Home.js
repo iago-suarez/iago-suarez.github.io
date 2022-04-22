@@ -136,9 +136,9 @@ function Home () {
               <Publication name="ELSED: Enhanced Line SEgment Drawing"
                            img={ImgELSED}
                            authors_year="Suárez, I., Buenaposada, J. M., & Baumela, L. (2022)"
-                           venue="Pattern Recognition, advance online publication"
+                           venue={<span><i>Pattern Recognition</i>, 127, 108619.</span>}
                            links={[
-                             <a href="https://arxiv.org/abs/2108.03144">Paper</a>,
+                             <a href="https://www.sciencedirect.com/science/article/pii/S0031320322001005/pdfft?md5=30d73760c68b632196efe2f0a1745a94&pid=1-s2.0-S0031320322001005-main.pdf">Paper</a>,
                              <a href="https://github.com/iago-suarez/ELSED">Code (C++)</a>,
                              <a href="https://doi.org/10.1016/j.patcog.2022.108619">DOI</a>,
                              <a href="/elsed">Project page</a>
