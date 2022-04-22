@@ -137,7 +137,7 @@ const Elsed = () => {
               &nbsp; {'  journal={Pattern Recognition},\n'} <br/>
               &nbsp; {'  volume={127},\n'} <br/>
               &nbsp; {'  pages={108619},\n'} <br/>
-              &nbsp; {'  year={2022}\n'} <br/>
+              &nbsp; {'  year={2022},\n'} <br/>
               &nbsp; {'  issn={0031-3203},\n'} <br/>
               &nbsp; {'  doi={https://doi.org/10.1016/j.patcog.2022.108619},\n'} <br/>
               &nbsp; {'  url={https://www.sciencedirect.com/science/article/pii/S0031320322001005}\n'} <br/>
