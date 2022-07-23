@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e60c3b92.css",
-    "main.js": "/static/js/main.90c41288.js",
+    "main.js": "/static/js/main.37513fb8.js",
     "static/js/787.93b0a6bc.chunk.js": "/static/js/787.93b0a6bc.chunk.js",
     "static/media/vanishing.mp4": "/static/media/vanishing.c8392133d85dbb195b84.mp4",
     "static/media/Slides_IROS18.pdf": "/static/media/Slides_IROS18.83669e7002e92960b943.pdf",
@@ -9,6 +9,7 @@
     "static/media/Slides_IbPRIA19.pdf": "/static/media/Slides_IbPRIA19.e66fe1a7858dc812343a.pdf",
     "static/media/FsgIros18.gif": "/static/media/FsgIros18.7e634d97b6c6938444b0.gif",
     "static/media/Slides_TFM_iago.pdf": "/static/media/Slides_TFM_iago.386c2d76a89cf7f15cb9.pdf",
+    "static/media/Poster_ICVSS22_Iago_Suarez.pdf": "/static/media/Poster_ICVSS22_Iago_Suarez.3d6f773372900408867b.pdf",
     "static/media/ImgRAL21.gif": "/static/media/ImgRAL21.f6ba3a7e1dd58bfaf3b5.gif",
     "static/media/Poster_PhDSymposium19.pdf": "/static/media/Poster_PhDSymposium19.a5816fd3a0996d9440da.pdf",
     "static/media/ElsedHeader.jpg": "/static/media/ElsedHeader.4d015790e9a338a9c056.jpg",
@@ -22,11 +23,11 @@
     "static/media/mypicture.jpg": "/static/media/mypicture.55c0820056d403e4d060.jpg",
     "index.html": "/index.html",
     "main.e60c3b92.css.map": "/static/css/main.e60c3b92.css.map",
-    "main.90c41288.js.map": "/static/js/main.90c41288.js.map",
+    "main.37513fb8.js.map": "/static/js/main.37513fb8.js.map",
     "787.93b0a6bc.chunk.js.map": "/static/js/787.93b0a6bc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e60c3b92.css",
-    "static/js/main.90c41288.js"
+    "static/js/main.37513fb8.js"
   ]
 }
