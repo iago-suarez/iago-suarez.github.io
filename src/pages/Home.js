@@ -8,6 +8,7 @@ import SlidesIbPRIA18 from '../documents/Slides_IbPRIA19.pdf'
 import PosterSymposiumUPM from '../documents/Poster_PhDSymposium19.pdf'
 import SlidesTFM from '../documents/Slides_TFM_iago.pdf'
 import SlidesPhD from '../documents/Slides_PhD_iago.pdf'
+import PosterICVSS22 from '../documents/Poster_ICVSS22_Iago_Suarez.pdf'
 import ImgELSED from '../images/ELSED.jpg'
 import ImgFSG from '../images/FsgIros18.gif'
 import ImgBelid from '../images/BelidImg.png'
@@ -295,6 +296,7 @@ function Home () {
             <div id="presentations-section">
               <h2>Public Presentations</h2>
               <ul>
+                <li><b>Sticking Points and Lines for Improved Image Matching</b>: International Computer Vision Summer School (ICVSS) 2022. <a href={PosterICVSS22} target="_blank" rel="noreferrer">poster</a></li>
                 <li><b>Master Universitario en Vision Artificial (URJC) 2021, 2020</b>: Augmented Reality in Urban Environments Seminar.&nbsp;
                   <a href="https://youtu.be/zijWdXDjwb0"  target="_blank" rel="noreferrer">video</a>
                 </li>
@@ -312,7 +314,8 @@ function Home () {
             <div id="awards-section">
               <h2>Honors and Awards</h2>
               <ul>
-                <li>Cum Laude PhD (Nov, 2021)</li>
+                <li>Reading Group Competition Award. International Computer Vision Summer School (ICVSS), 2022.</li>
+                <li>Cum Laude PhD (November, 2021)</li>
                 <li>Best Student Paper Award of ibPRIA 2019</li>
                 <li>Best PhD Thesis Award in the ICT field of the Polytechnic University of Madrid (May, 2019), &nbsp;
                   <a href="https://youtu.be/pJN94oZgqWY" target="_blank" rel="noreferrer">video</a>, &nbsp;
