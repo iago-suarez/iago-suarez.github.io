@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.e60c3b92.css",
-    "main.js": "/static/js/main.a827deaf.js",
+    "main.css": "/static/css/main.d926c817.css",
+    "main.js": "/static/js/main.930faae6.js",
     "static/js/787.93b0a6bc.chunk.js": "/static/js/787.93b0a6bc.chunk.js",
     "static/media/vanishing.mp4": "/static/media/vanishing.c8392133d85dbb195b84.mp4",
     "static/media/Slides_IROS18.pdf": "/static/media/Slides_IROS18.83669e7002e92960b943.pdf",
     "static/media/Slides_PhD_iago.pdf": "/static/media/Slides_PhD_iago.c9d33a7b045b6c406817.pdf",
+    "static/media/gluestick.gif": "/static/media/gluestick.2edba87aca7a3012e87d.gif",
     "static/media/Slides_IbPRIA19.pdf": "/static/media/Slides_IbPRIA19.e66fe1a7858dc812343a.pdf",
     "static/media/FsgIros18.gif": "/static/media/FsgIros18.7e634d97b6c6938444b0.gif",
     "static/media/Slides_TFM_iago.pdf": "/static/media/Slides_TFM_iago.386c2d76a89cf7f15cb9.pdf",
@@ -22,12 +23,12 @@
     "static/media/BelidImg.png": "/static/media/BelidImg.c824f410b928f5b84f87.png",
     "static/media/mypicture.jpg": "/static/media/mypicture.55c0820056d403e4d060.jpg",
     "index.html": "/index.html",
-    "main.e60c3b92.css.map": "/static/css/main.e60c3b92.css.map",
-    "main.a827deaf.js.map": "/static/js/main.a827deaf.js.map",
+    "main.d926c817.css.map": "/static/css/main.d926c817.css.map",
+    "main.930faae6.js.map": "/static/js/main.930faae6.js.map",
     "787.93b0a6bc.chunk.js.map": "/static/js/787.93b0a6bc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e60c3b92.css",
-    "static/js/main.a827deaf.js"
+    "static/css/main.d926c817.css",
+    "static/js/main.930faae6.js"
   ]
 }
