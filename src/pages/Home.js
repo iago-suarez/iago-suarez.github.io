@@ -10,6 +10,7 @@ import SlidesTFM from '../documents/Slides_TFM_iago.pdf'
 import SlidesPhD from '../documents/Slides_PhD_iago.pdf'
 import PosterICVSS22 from '../documents/Poster_ICVSS22_Iago_Suarez.pdf'
 import ImgELSED from '../images/ELSED.jpg'
+import ImgGlueStick from '../images/gluestick.gif'
 import ImgFSG from '../images/FsgIros18.gif'
 import ImgBelid from '../images/BelidImg.png'
 import ImgBeblid from '../images/BeblidImg.png'
@@ -124,15 +125,28 @@ function Home () {
               <p>Bachelor in Computer Science, Master in Artificial Intelligence (AI), and PhD in AI.
                 I am a senior researcher in Computer Vision (CV). I have managed several CV and robotic projects that have been
                 presented in symposiums and journals. I also contribute to important libraries such as OpenCV.</p>
-              <p>In business, among a large list of projects I would like to highlight my contributions in The Graffter,
-                where I developed Augmented Reality technology for urban environment and XOIA Software Development, a
-                company that I have co-founded and nowadays has more than 10 employees.
-                At the moment, I lead the CV team of New Horizon Technologies. We develop several projects about video
-                surveillance, CV for sports, and medical image analysis.</p>
+              <p>Among a large list of projects I would like to highlight my contributions in The Graffter,
+                where I developed Augmented Reality technology for urban environment and XOIA Soft. Dev., a
+                company that I have co-founded and nowadays has more than 10 employees. I led the CV team of New Horizon
+                Technologies, developing several video surveillance, and medical image projects.</p>
+
+              <p>At the moment, I am a Senior Machine Learning Engineer at Qualcomm XR Labs Europe, where we are
+                creating a new generation of AR/VR headsets by using cutting-edge Deep Learning technology to improve
+                SLAM and SfM. </p>
             </div>
             <br/>
             <div id="publications-section">
               <h2>Publications</h2>
+              <Publication name="GlueStick: Robust Image Matching by Sticking Points and Lines Together"
+                           img={ImgGlueStick}
+                           authors_year={<span>Pautrat, R.<sup>*</sup>, Suárez, I.<sup>*</sup>, Yu, Y., Pollefeys, M., Larsson, V. (2023)</span>}
+                           venue={<span><sup>*</sup>Equal contribution.  &nbsp; <i>ArXiv</i>.</span>}
+                           links={[
+                             <a href="https://arxiv.org/pdf/2304.02008.pdf">Paper</a>,
+                             <a href="https://github.com/cvg/GlueStick">Code</a>,
+                             <a href="/gluestick">Project page</a>,
+                             <a href="https://colab.research.google.com/github/cvg/GlueStick/blob/main/gluestick_matching_demo.ipynb">Colab Demo</a>
+                           ]}/>
 
               <Publication name="ELSED: Enhanced Line SEgment Drawing"
                            img={ImgELSED}
