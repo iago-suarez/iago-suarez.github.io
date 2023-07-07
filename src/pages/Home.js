@@ -9,6 +9,7 @@ import PosterSymposiumUPM from '../documents/Poster_PhDSymposium19.pdf'
 import SlidesTFM from '../documents/Slides_TFM_iago.pdf'
 import SlidesPhD from '../documents/Slides_PhD_iago.pdf'
 import PosterICVSS22 from '../documents/Poster_ICVSS22_Iago_Suarez.pdf'
+import SummerCampMIL23 from '../documents/SummerCampMIL23.pdf'
 import ImgELSED from '../images/ELSED.jpg'
 import ImgGlueStick from '../images/gluestick.gif'
 import ImgFSG from '../images/FsgIros18.gif'
@@ -310,6 +311,8 @@ function Home () {
             <div id="presentations-section">
               <h2>Public Presentations</h2>
               <ul>
+                <li><b>Extended Reality: Towards Spatial Intelligence</b>: Madrid Innovation Lab <a href="https://milmadrid.es/disfruta-el-verano-a-mil-summer-camp-2023/">Summer Camp</a> (2023).&nbsp;
+                <a href={SummerCampMIL23} target="_blank" rel="noreferrer">slides.pdf</a>, <a href="https://docs.google.com/presentation/d/1EM4jQSoufcEDOPeYmybGYD3QeBP7XHYx/edit?usp=sharing&ouid=103357012295063844651&rtpof=true&sd=true" target="_blank" rel="noreferrer">slides.pptx</a> </li>
                 <li><b>Sticking Points and Lines for Improved Image Matching</b>: International Computer Vision Summer School (ICVSS) 2022. <a href={PosterICVSS22} target="_blank" rel="noreferrer">poster</a></li>
                 <li><b>Master Universitario en Vision Artificial (URJC) 2021, 2020</b>: Augmented Reality in Urban Environments Seminar.&nbsp;
                   <a href="https://youtu.be/zijWdXDjwb0"  target="_blank" rel="noreferrer">video</a>
