@@ -141,7 +141,7 @@ function Home () {
               <Publication name="GlueStick: Robust Image Matching by Sticking Points and Lines Together"
                            img={ImgGlueStick}
                            authors_year={<span>Pautrat, R.<sup>*</sup>, Suárez, I.<sup>*</sup>, Yu, Y., Pollefeys, M., Larsson, V. (2023)</span>}
-                           venue={<span><sup>*</sup>Equal contribution.  &nbsp; <i>ArXiv</i>.</span>}
+                           venue={<span><sup>*</sup>Equal contribution.  &nbsp; <i>ICCV 2023</i>.</span>}
                            links={[
                              <a href="https://arxiv.org/pdf/2304.02008.pdf">Paper</a>,
                              <a href="https://github.com/cvg/GlueStick">Code</a>,
