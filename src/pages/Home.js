@@ -17,6 +17,7 @@ import ImgBelid from '../images/BelidImg.png'
 import ImgBeblid from '../images/BeblidImg.png'
 import ImgRAL21 from '../images/ImgRAL21.gif'
 import VanishingPointsVideo from '../videos/vanishing.mp4'
+import CardiaVideo from '../videos/cardia_demo.mp4'
 import '../App.css'
 import '../Sidebar.css'
 import * as Icon from 'react-bootstrap-icons'
@@ -347,15 +348,20 @@ function Home () {
               <h2>Other Projects</h2>
               I am specially proud of the following companies/project:<br/><br/>
               <ul>
-                <li>The Graffter. &nbsp;
-                  <a href="http://www.thegraffter.com/en/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
-                  <a href="https://www.youtube.com/channel/UCaA4tTBqW6Wbkxz1Ep-4szw" target="_blank" rel="noreferrer">videos1</a>,  &nbsp;
-                  <a href="https://youtu.be/XIBLZUiOKmc" target="_blank" rel="noreferrer">video2</a>
+                <li>New Horizon Technologies ~ Apolo AI. &nbsp;
+                  <a href="https://www.apoloai.com/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
+                  <a href="https://cardia.ai/" target="_blank" rel="noreferrer">cardia</a>,  &nbsp;
+                  <a href={CardiaVideo} target="_blank" rel="noreferrer">video</a>
                 </li>
                 <li>XOIA Software Development. &nbsp;
                   <a href="https://xoia.es/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
                   <a href="https://youtu.be/gJum_Qv_Ws8" target="_blank" rel="noreferrer">video1</a>,  &nbsp;
                   <a href="https://youtu.be/74K1lK3kQJM" target="_blank" rel="noreferrer">video2</a>
+                </li>
+                <li>The Graffter. &nbsp;
+                  <a href="http://www.thegraffter.com/en/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
+                  <a href="https://www.youtube.com/channel/UCaA4tTBqW6Wbkxz1Ep-4szw" target="_blank" rel="noreferrer">videos1</a>,  &nbsp;
+                  <a href="https://youtu.be/XIBLZUiOKmc" target="_blank" rel="noreferrer">video2</a>
                 </li>
                 <li>Bookker. &nbsp;
                   <a href="https://www.bookkercorp.com/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
@@ -370,7 +376,7 @@ function Home () {
             <div>
               <h2>Contact</h2>
               <p><b>Email</b>:&nbsp;
-                <a href="mailto:iago.suarez.canosa@alumnos.upm.es">iago.suarez.canosa@alumnos.upm.es</a></p>
+                <a href="mailto:iagosuarz@gmail.com">iagosuarz@gmail.com</a></p>
             </div>
 
           </div>
