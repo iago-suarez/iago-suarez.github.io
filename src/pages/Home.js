@@ -313,7 +313,9 @@ function Home () {
               <h2>Public Presentations</h2>
               <ul>
                 <li><b>Extended Reality: Towards Spatial Intelligence</b>: Madrid Innovation Lab <a href="https://milmadrid.es/disfruta-el-verano-a-mil-summer-camp-2023/">Summer Camp</a> (2023).&nbsp;
-                <a href={SummerCampMIL23} target="_blank" rel="noreferrer">slides.pdf</a>, <a href="https://docs.google.com/presentation/d/1EM4jQSoufcEDOPeYmybGYD3QeBP7XHYx/edit?usp=sharing&ouid=103357012295063844651&rtpof=true&sd=true" target="_blank" rel="noreferrer">slides.pptx</a> </li>
+                <a href={SummerCampMIL23} target="_blank" rel="noreferrer">slides.pdf</a>,
+                <a href="https://docs.google.com/presentation/d/1EM4jQSoufcEDOPeYmybGYD3QeBP7XHYx/edit?usp=sharing&ouid=103357012295063844651&rtpof=true&sd=true" target="_blank" rel="noreferrer">slides.pptx</a>,
+                <a href="https://youtu.be/vkUojbPE_3o" target="_blank" rel="noreferrer">video (spanish)</a> </li>
                 <li><b>Sticking Points and Lines for Improved Image Matching</b>: International Computer Vision Summer School (ICVSS) 2022. <a href={PosterICVSS22} target="_blank" rel="noreferrer">poster</a></li>
                 <li><b>Master Universitario en Vision Artificial (URJC) 2021, 2020</b>: Augmented Reality in Urban Environments Seminar.&nbsp;
                   <a href="https://youtu.be/zijWdXDjwb0"  target="_blank" rel="noreferrer">video</a>
