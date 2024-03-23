@@ -358,6 +358,11 @@ function Home () {
               <h2>Other Projects</h2>
               I am specially proud of the following companies/project:<br/><br/>
               <ul>
+                <li>ML Circle. &nbsp;
+                  <a href="https://mlcircle.org/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
+                  <a href="https://www.meetup.com/madrid-machine-learning-meetup/" target="_blank" rel="noreferrer">meetup</a>, &nbsp;
+                  <a href="https://youtube.com/playlist?list=PLHeG8vnHL6C8mOU8K8vs2j9I7dSMYCgJQ&si=QQAqaV9PpU4w8aNZ" target="_blank" rel="noreferrer">previous talks</a>
+                </li>
                 <li>New Horizon Technologies ~ Apolo AI. &nbsp;
                   <a href="https://www.apoloai.com/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
                   <a href="https://cardia.ai/" target="_blank" rel="noreferrer">cardia</a>,  &nbsp;
