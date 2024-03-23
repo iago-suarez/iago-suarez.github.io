@@ -371,7 +371,9 @@ function Home () {
                   <a href="https://youtu.be/pYOwr3o-AWY" target="_blank" rel="noreferrer">video2</a>
                 </li>
                 {/*<li>Eation Tech. &nbsp;<a href="https://www.eationtech.com/">webpage</a>, &nbsp;<a href="https://youtu.be/0cbVPS4-VEQ">video</a></li>*/}
-                <li>White Mirror. &nbsp;<a href="https://www.whitemirror.es/" target="_blank" rel="noreferrer">webpage</a></li>
+                <li>White Mirror. &nbsp;<a href="https://www.whitemirror.es/" target="_blank" rel="noreferrer">webpage</a>,
+                <a href="https://iago-suarez.com/wool-ar/" target="_blank" rel="noreferrer">Online Demo</a>
+                </li>
               </ul>
             </div>
             <br/>
