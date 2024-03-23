@@ -263,6 +263,11 @@ function Home () {
               Advisor of the following Bachelor and Master projects:
               <ul>
                 <li>
+                  <b>Lomas, Vanesa </b> (2023). &nbsp;
+                    Detección de personas en imágenes omnidireccionales. Thesis (Master thesis).
+                </li>
+
+                <li>
                   <b>García-Siñeriz Sánchez, Ignacio </b> (2021). &nbsp;
                   <a href="http://oa.upm.es/68051/1/TFG_IGNACIO_GARCIA_SINERIZ_SANCHEZ.pdf" target="_blank" rel="noreferrer">
                     Interfaz gráfica para el uso de Realidad Aumentada en Unity3D
@@ -313,8 +318,8 @@ function Home () {
               <h2>Public Presentations</h2>
               <ul>
                 <li><b>Extended Reality: Towards Spatial Intelligence</b>: Madrid Innovation Lab <a href="https://milmadrid.es/disfruta-el-verano-a-mil-summer-camp-2023/">Summer Camp</a> (2023).&nbsp;
-                <a href={SummerCampMIL23} target="_blank" rel="noreferrer">slides.pdf</a>,
-                <a href="https://docs.google.com/presentation/d/1EM4jQSoufcEDOPeYmybGYD3QeBP7XHYx/edit?usp=sharing&ouid=103357012295063844651&rtpof=true&sd=true" target="_blank" rel="noreferrer">slides.pptx</a>,
+                <a href={SummerCampMIL23} target="_blank" rel="noreferrer">slides.pdf</a>,  &nbsp;
+                <a href="https://docs.google.com/presentation/d/1EM4jQSoufcEDOPeYmybGYD3QeBP7XHYx/edit?usp=sharing&ouid=103357012295063844651&rtpof=true&sd=true" target="_blank" rel="noreferrer">slides.pptx</a>,  &nbsp;
                 <a href="https://youtu.be/vkUojbPE_3o" target="_blank" rel="noreferrer">video (spanish)</a> </li>
                 <li><b>Sticking Points and Lines for Improved Image Matching</b>: International Computer Vision Summer School (ICVSS) 2022. <a href={PosterICVSS22} target="_blank" rel="noreferrer">poster</a></li>
                 <li><b>Master Universitario en Vision Artificial (URJC) 2021, 2020</b>: Augmented Reality in Urban Environments Seminar.&nbsp;
@@ -334,7 +339,10 @@ function Home () {
             <div id="awards-section">
               <h2>Honors and Awards</h2>
               <ul>
-                <li>Reading Group Competition Award. International Computer Vision Summer School (ICVSS), 2022.</li>
+                <li>Excellent PhD Award, Computer Science Faculty, Universidad Politécnica de Madrid (January, 2024), &nbsp;
+                  <a href="https://youtu.be/lznCqRtA6TE?si=0ImUd6yYpzXWebI7&t=6047" target="_blank" rel="noreferrer">recording</a>
+                </li>
+                <li>Reading Group Competition Award. International Computer Vision Summer School (ICVSS), 2022</li>
                 <li>Cum Laude PhD (November, 2021)</li>
                 <li>Best Student Paper Award of ibPRIA 2019</li>
                 <li>Best PhD Thesis Award in the ICT field of the Polytechnic University of Madrid (May, 2019), &nbsp;
@@ -371,8 +379,8 @@ function Home () {
                   <a href="https://youtu.be/pYOwr3o-AWY" target="_blank" rel="noreferrer">video2</a>
                 </li>
                 {/*<li>Eation Tech. &nbsp;<a href="https://www.eationtech.com/">webpage</a>, &nbsp;<a href="https://youtu.be/0cbVPS4-VEQ">video</a></li>*/}
-                <li>White Mirror. &nbsp;<a href="https://www.whitemirror.es/" target="_blank" rel="noreferrer">webpage</a>,
-                <a href="https://iago-suarez.com/wool-ar/" target="_blank" rel="noreferrer">Online Demo</a>
+                <li>White Mirror. &nbsp;<a href="https://www.whitemirror.es/" target="_blank" rel="noreferrer">webpage</a>,  &nbsp;
+                <a href="/wool-ar/" target="_blank" rel="noreferrer">Online Demo</a>
                 </li>
               </ul>
             </div>
