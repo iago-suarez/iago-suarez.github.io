@@ -25,3 +25,26 @@ body {
 
 .sidebar-icons{
 }
+
+.project-card {
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.project-card a {
+    color: #ffffff;
+}
+
+.project-card a:hover {
+    color: #e0e0e0;
+    text-decoration: none;
+}

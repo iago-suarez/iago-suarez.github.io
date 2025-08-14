@@ -356,38 +356,77 @@ function Home () {
 
             <div id="projects-section">
               <h2>Other Projects</h2>
-              I am specially proud of the following companies/project:<br/><br/>
-              <ul>
-                <li>ML Circle. &nbsp;
-                  <a href="https://mlcircle.org/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
-                  <a href="https://www.meetup.com/madrid-machine-learning-meetup/" target="_blank" rel="noreferrer">meetup</a>, &nbsp;
-                  <a href="https://youtube.com/playlist?list=PLHeG8vnHL6C8mOU8K8vs2j9I7dSMYCgJQ&si=QQAqaV9PpU4w8aNZ" target="_blank" rel="noreferrer">previous talks</a>
-                </li>
-                <li>New Horizon Technologies ~ Apolo AI. &nbsp;
-                  <a href="https://www.apoloai.com/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
-                  <a href="https://cardia.ai/" target="_blank" rel="noreferrer">cardia</a>,  &nbsp;
-                  <a href={CardiaVideo} target="_blank" rel="noreferrer">video</a>
-                </li>
-                <li>XOIA Software Development. &nbsp;
-                  <a href="https://xoia.es/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
-                  <a href="https://youtu.be/gJum_Qv_Ws8" target="_blank" rel="noreferrer">video1</a>,  &nbsp;
-                  <a href="https://youtu.be/74K1lK3kQJM" target="_blank" rel="noreferrer">video2</a>
-                </li>
-                <li>The Graffter. &nbsp;
-                  <a href="http://www.thegraffter.com/en/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
-                  <a href="https://www.youtube.com/channel/UCaA4tTBqW6Wbkxz1Ep-4szw" target="_blank" rel="noreferrer">videos1</a>,  &nbsp;
-                  <a href="https://youtu.be/XIBLZUiOKmc" target="_blank" rel="noreferrer">video2</a>
-                </li>
-                <li>Bookker. &nbsp;
-                  <a href="https://www.bookkercorp.com/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
-                  <a href="https://youtu.be/hM3mOG7bLEU" target="_blank" rel="noreferrer">video1</a>,  &nbsp;
-                  <a href="https://youtu.be/pYOwr3o-AWY" target="_blank" rel="noreferrer">video2</a>
-                </li>
-                {/*<li>Eation Tech. &nbsp;<a href="https://www.eationtech.com/">webpage</a>, &nbsp;<a href="https://youtu.be/0cbVPS4-VEQ">video</a></li>*/}
-                <li>White Mirror. &nbsp;<a href="https://www.whitemirror.es/" target="_blank" rel="noreferrer">webpage</a>,  &nbsp;
-                <a href="/wool-ar/" target="_blank" rel="noreferrer">Online Demo</a>
-                </li>
-              </ul>
+              <p>I am specially proud of the following companies/projects:</p>
+              <div className="row row-cols-1 row-cols-md-2 g-4">
+                <div className="col">
+                  <div className="card h-100 text-white project-card">
+                    <div className="card-body text-center">
+                      <h5 className="card-title">ML Circle</h5>
+                      <a className="card-link" href="https://mlcircle.org/" target="_blank" rel="noreferrer">webpage</a>
+                      <a className="card-link" href="https://www.meetup.com/madrid-machine-learning-meetup/" target="_blank" rel="noreferrer">meetup</a>
+                      <a className="card-link" href="https://youtube.com/playlist?list=PLHeG8vnHL6C8mOU8K8vs2j9I7dSMYCgJQ&si=QQAqaV9PpU4w8aNZ" target="_blank" rel="noreferrer">previous talks</a>
+                    </div>
+                  </div>
+                </div>
+                <div className="col">
+                  <div className="card h-100 text-white project-card">
+                    <div className="card-body text-center">
+                      <h5 className="card-title">New Horizon Technologies ~ Apolo AI</h5>
+                      <a className="card-link" href="https://www.apoloai.com/" target="_blank" rel="noreferrer">webpage</a>
+                      <a className="card-link" href="https://cardia.ai/" target="_blank" rel="noreferrer">cardia</a>
+                      <a className="card-link" href={CardiaVideo} target="_blank" rel="noreferrer">video</a>
+                    </div>
+                  </div>
+                </div>
+                <div className="col">
+                  <div className="card h-100 text-white project-card">
+                    <div className="card-body text-center">
+                      <h5 className="card-title">XOIA Software Development</h5>
+                      <a className="card-link" href="https://xoia.es/" target="_blank" rel="noreferrer">webpage</a>
+                      <a className="card-link" href="https://youtu.be/gJum_Qv_Ws8" target="_blank" rel="noreferrer">video1</a>
+                      <a className="card-link" href="https://youtu.be/74K1lK3kQJM" target="_blank" rel="noreferrer">video2</a>
+                    </div>
+                  </div>
+                </div>
+                <div className="col">
+                  <div className="card h-100 text-white project-card">
+                    <div className="card-body text-center">
+                      <h5 className="card-title">The Graffter</h5>
+                      <a className="card-link" href="http://www.thegraffter.com/en/" target="_blank" rel="noreferrer">webpage</a>
+                      <a className="card-link" href="https://www.youtube.com/channel/UCaA4tTBqW6Wbkxz1Ep-4szw" target="_blank" rel="noreferrer">videos1</a>
+                      <a className="card-link" href="https://youtu.be/XIBLZUiOKmc" target="_blank" rel="noreferrer">video2</a>
+                    </div>
+                  </div>
+                </div>
+                <div className="col">
+                  <div className="card h-100 text-white project-card">
+                    <div className="card-body text-center">
+                      <h5 className="card-title">Bookker</h5>
+                      <a className="card-link" href="https://www.bookkercorp.com/" target="_blank" rel="noreferrer">webpage</a>
+                      <a className="card-link" href="https://youtu.be/hM3mOG7bLEU" target="_blank" rel="noreferrer">video1</a>
+                      <a className="card-link" href="https://youtu.be/pYOwr3o-AWY" target="_blank" rel="noreferrer">video2</a>
+                    </div>
+                  </div>
+                </div>
+                {/*<div className="col">
+                  <div className="card h-100 text-white project-card">
+                    <div className="card-body text-center">
+                      <h5 className="card-title">Eation Tech</h5>
+                      <a className="card-link" href="https://www.eationtech.com/" target="_blank" rel="noreferrer">webpage</a>
+                      <a className="card-link" href="https://youtu.be/0cbVPS4-VEQ" target="_blank" rel="noreferrer">video</a>
+                    </div>
+                  </div>
+                </div>*/}
+                <div className="col">
+                  <div className="card h-100 text-white project-card">
+                    <div className="card-body text-center">
+                      <h5 className="card-title">White Mirror</h5>
+                      <a className="card-link" href="https://www.whitemirror.es/" target="_blank" rel="noreferrer">webpage</a>
+                      <a className="card-link" href="/wool-ar/" target="_blank" rel="noreferrer">Online Demo</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <br/>
             <div>
