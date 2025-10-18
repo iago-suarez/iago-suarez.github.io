@@ -53,7 +53,251 @@ function Publication(props) {
   </div>
 }
 
+function HighlightCard ({ icon: IconComponent, title, subtitle, description, tags = [], links = [], children }) {
+  return <div className="highlight-card">
+    <div className="highlight-card-header">
+      {IconComponent && <div className="highlight-card-icon">
+        <IconComponent/>
+      </div>}
+      <div>
+        <p className="highlight-card-title">{title}</p>
+        {subtitle && <p className="highlight-card-subtitle">{subtitle}</p>}
+        {tags.length > 0 && <div className="highlight-card-tags">
+          {tags.map((tag, idx) => <span className="highlight-card-tag" key={idx}>{tag}</span>)}
+        </div>}
+      </div>
+    </div>
+    {description && <p className="highlight-card-description">{description}</p>}
+    {children}
+    {links.length > 0 && <div className="highlight-card-links">
+      {links.map((link, idx) =>
+        <a key={idx}
+           href={link.href}
+           target={link.target || '_blank'}
+           rel={link.rel || 'noreferrer'}>{link.label}</a>
+      )}
+    </div>}
+  </div>
+}
+
 function Home () {
+  const educationHighlights = [
+    {
+      icon: Icon.Cpu,
+      title: 'M.Sc. in Artificial Intelligence',
+      subtitle: 'Universidad Politécnica de Madrid · 2016',
+      description: 'Specialised in machine learning, computer vision, evolutionary computation, and neural networks. Built a 3D mobile augmented reality engine as a capstone project.',
+      tags: ['Machine Learning', 'AR Engine'],
+      links: [
+        { label: 'Capstone thesis', href: 'https://oa.upm.es/43350/1/TFM_XOANIAGO_SUAREZ_CANOSA.pdf' },
+        { label: 'Slides', href: SlidesTFM },
+        { label: 'Demo video', href: 'https://youtu.be/NnIveZCbigk' }
+      ]
+    },
+        {
+      icon: Icon.Laptop,
+      title: 'B.Sc. in Computer Science',
+      subtitle: 'Universidade da Coruña · 2015',
+      description: 'Developed AncoWeb, a behavioural analytics platform for understanding user interactions, graduating with highest honours.',
+      tags: ['Full-Stack', 'Behaviour Analytics'],
+      links: [
+        { label: 'Project video', href: 'https://www.youtube.com/watch?v=VtWA3Z4OhHQ' },
+        { label: 'Source code', href: 'https://github.com/iago-suarez/ancoweb-TFG' }
+      ]
+    },
+    {
+      icon: Icon.BookHalf,
+      title: 'Ph.D. in Artificial Intelligence',
+      subtitle: 'Universidad Politécnica de Madrid · 2021',
+      description: 'Advanced augmented reality for large-scale urban environments by creating efficient line and keypoint detectors, geometric verification pipelines, and real-time pose estimation tools.',
+      tags: ['Augmented Reality', 'Geometric Vision'],
+      links: [
+        { label: 'Thesis', href: 'https://oa.upm.es/69043' },
+        { label: 'Defense slides', href: SlidesPhD }
+      ]
+    },
+    {
+      icon: Icon.Globe,
+      title: 'Research Internship',
+      subtitle: 'ETH Zürich — CVG Lab · 2021',
+      description: 'Collaborated with Prof. Marc Pollefeys on geometric-aware line segment matching for SLAM, combining learned features with robust multi-view geometry.',
+      tags: ['SLAM', 'Feature Matching'],
+      links: [
+        { label: 'CVG Lab', href: 'https://www.cvg.ethz.ch/' }
+      ]
+    }
+  ]
+
+  const teachingHighlights = [
+    {
+      icon: Icon.Easel,
+      title: 'Graduate Instruction',
+      subtitle: 'Teaching Assistant · 2019–2021',
+      description: 'Delivered hands-on labs and mentoring for Deep Learning (M.Sc. Digital Innovation, English) and Pattern Recognition (Computer Engineering, Spanish).',
+      tags: ['Deep Learning', 'Pattern Recognition'],
+      links: [
+        { label: 'Deep Learning guide', href: DeepLearningGuide },
+        { label: 'Pattern Recognition guide', href: ReconocimientoGuide }
+      ]
+    },
+    {
+      icon: Icon.People,
+      title: 'Thesis Supervision',
+      subtitle: '9 Master theses · 3 Bachelor theses',
+      description: 'Guided students through projects spanning omnidirectional perception, AR authoring tools, and efficient feature descriptors.',
+      children: <details>
+        <summary>View selected theses</summary>
+        <ul className="highlight-list">
+          <li><b>Lomas, Vanesa</b> (2023) — Detección de personas en imágenes omnidireccionales.</li>
+          <li><b>García-Siñeriz Sánchez, Ignacio</b> (2021) — Interfaz gráfica para el uso de Realidad Aumentada en Unity3D.</li>
+          <li><b>Díaz Álvarez, Jorge</b> (2021) — Visión por computador para el uso de Realidad Aumentada en Unity3D.</li>
+          <li><b>Wei, Tingyun</b> (2020) — A multi-platform comparison of local feature description methods.</li>
+          <li><b>Olivares Gil, Alicia</b> (2020) — Estudio sobre detectores y descriptores de segmentos rectilíneos.</li>
+          <li><b>Cobo Cabornero, Alejandro</b> (2019) — Evaluación y optimización de un descriptor de características.</li>
+          <li><b>Audante Ramos, Néstor Rafael</b> (2019) — Simulación de entornos urbanos para el aprendizaje de descriptores locales.</li>
+          <li><b>Sfeir Malavé, Ghesn Daniel</b> (2019) — Learning highly efficient local image descriptors.</li>
+        </ul>
+      </details>
+    }
+  ]
+
+  const presentationHighlights = [
+    {
+      icon: Icon.Mic,
+      title: 'Extended Reality: Towards Spatial Intelligence',
+      subtitle: 'Madrid Innovation Lab Summer Camp · 2023',
+      description: 'Keynote on how XR, generative AI, and vision converge to build human-centered spatial interfaces.',
+      links: [
+        { label: 'Slides (PDF)', href: SummerCampMIL23 },
+        { label: 'Slides (PPTX)', href: 'https://docs.google.com/presentation/d/1EM4jQSoufcEDOPeYmybGYD3QeBP7XHYx/edit?usp=sharing&ouid=103357012295063844651&rtpof=true&sd=true' },
+        { label: 'Talk recording', href: 'https://youtu.be/vkUojbPE_3o' }
+      ]
+    },
+    {
+      icon: Icon.Bullseye,
+      title: 'Sticking Points and Lines for Improved Image Matching',
+      subtitle: 'International Computer Vision Summer School · 2022',
+      description: 'Presented GlueStick to the ICVSS community, sharing lessons on combining point and line cues for robust matching.',
+      links: [
+        { label: 'Poster', href: PosterICVSS22 }
+      ]
+    },
+    {
+      icon: Icon.Megaphone,
+      title: 'Academic & Public Outreach',
+      subtitle: '2017–2021',
+      description: 'Invited seminars at URJC, IbPRIA, IROS, and TEDx OviedoUniversity covering augmented reality pipelines and line detection.',
+      links: [
+        { label: 'URJC seminar', href: 'https://youtu.be/zijWdXDjwb0' },
+        { label: 'IbPRIA slides', href: SlidesIbPRIA18 },
+        { label: 'IROS slides', href: SlidesIROS18 },
+        { label: 'TEDx workshop', href: 'https://youtu.be/XIBLZUiOKmc' }
+      ]
+    }
+  ]
+
+  const awardHighlights = [
+    {
+      icon: Icon.Award,
+      title: 'Excellent PhD Award',
+      subtitle: 'UPM School of Computer Science · 2024',
+      links: [
+        { label: 'Ceremony recording', href: 'https://youtu.be/lznCqRtA6TE?si=0ImUd6yYpzXWebI7&t=6047' }
+      ]
+    },
+    {
+      icon: Icon.Trophy,
+      title: 'Reading Group Competition Winner',
+      subtitle: 'International Computer Vision Summer School · 2022'
+    },
+    {
+      icon: Icon.Star,
+      title: 'Best Student Paper',
+      subtitle: 'IbPRIA · 2019'
+    },
+    {
+      icon: Icon.PatchCheck,
+      title: 'Best PhD Thesis in ICT',
+      subtitle: 'Polytechnic University of Madrid · 2019',
+      links: [
+        { label: 'Award video', href: 'https://youtu.be/pJN94oZgqWY' },
+        { label: 'Poster', href: PosterSymposiumUPM }
+      ]
+    },
+    {
+      icon: Icon.LightningCharge,
+      title: 'Open Source Final Degree Prize',
+      subtitle: 'Universidade da Coruña · 2015'
+    }
+  ]
+
+  const projectHighlights = [
+    {
+      icon: Icon.Lightbulb,
+      title: 'ML Circle',
+      subtitle: 'Co-founder & Co-organiser',
+      description: 'Community that curates meetups, study groups, and technical content for Madrid’s applied machine learning practitioners.',
+      links: [
+        { label: 'Website', href: 'https://mlcircle.org/' },
+        { label: 'Meetup', href: 'https://www.meetup.com/madrid-machine-learning-meetup/' },
+        { label: 'Talk archive', href: 'https://youtube.com/playlist?list=PLHeG8vnHL6C8mOU8K8vs2j9I7dSMYCgJQ&si=QQAqaV9PpU4w8aNZ' }
+      ]
+    },
+    {
+      icon: Icon.Heart,
+      title: 'Apolo AI at New Horizon Technologies',
+      subtitle: 'Computer Vision Lead',
+      description: 'Built AI-first healthcare products such as Cardia, an early-warning system for cardiac events using multimodal sensing and vision analytics.',
+      links: [
+        { label: 'Apolo AI', href: 'https://www.apoloai.com/' },
+        { label: 'Cardia', href: 'https://cardia.ai/' },
+        { label: 'Product video', href: CardiaVideo }
+      ]
+    },
+    {
+      icon: Icon.Vr,
+      title: 'XOIA Software Development',
+      subtitle: 'Co-founder',
+      description: 'Scaled a boutique studio into a 10+ person AR/VR company delivering immersive experiences for industry, culture, and education.',
+      links: [
+        { label: 'Website', href: 'https://xoia.es/' },
+        { label: 'Demo 1', href: 'https://youtu.be/gJum_Qv_Ws8' },
+        { label: 'Demo 2', href: 'https://youtu.be/74K1lK3kQJM' }
+      ]
+    },
+    {
+      icon: Icon.GeoAlt,
+      title: 'The Graffter',
+      subtitle: 'Computer Vision Lead',
+      description: 'Delivered large-scale AR visualisation for smart cities, enabling interactive urban narratives anchored to geolocated content.',
+      links: [
+        { label: 'Website', href: 'http://www.thegraffter.com/en/' },
+        { label: 'YouTube channel', href: 'https://www.youtube.com/channel/UCaA4tTBqW6Wbkxz1Ep-4szw' },
+        { label: 'Demo video', href: 'https://youtu.be/XIBLZUiOKmc' }
+      ]
+    },
+    {
+      icon: Icon.Briefcase,
+      title: 'Bookker',
+      subtitle: 'Vision & Innovation Advisor',
+      description: 'Defined spatial analytics for hybrid workplaces, integrating occupancy sensing, booking telemetry, and AR guidance.',
+      links: [
+        { label: 'Website', href: 'https://www.bookkercorp.com/' },
+        { label: 'Product video', href: 'https://youtu.be/hM3mOG7bLEU' },
+        { label: 'Showcase', href: 'https://youtu.be/pYOwr3o-AWY' }
+      ]
+    },
+    {
+      icon: Icon.Compass,
+      title: 'White Mirror',
+      subtitle: 'Creative Technologist',
+      description: 'Explores how computer vision and interactive media can turn physical spaces into narrative experiences.',
+      links: [
+        { label: 'Website', href: 'https://www.whitemirror.es/' },
+        { label: 'Wool AR demo', href: '/wool-ar/' }
+      ]
+    }
+  ]
   return (
     <div className="App">
       <div id="wrapper">
@@ -132,17 +376,11 @@ function Home () {
           <br/><br/>
 
           <section className="hero-section">
-            <div>
-              <h2 className="hero-heading">Staff ML Engineer · Computer Vision Researcher</h2>
-              <p className="hero-tagline">Qualcomm XR Labs Europe</p>
+            <div className="hero-inner">
+              <p className="hero-tagline">Senior ML Engineer · Computer Vision Researcher</p>
+              <h2 className="hero-heading">Leveraging geometry-aware deep learning for XR, robotics, and imaging.</h2>
               <p className="hero-subtitle">
-                I hold a B.Sc. in Computer Science, an M.Sc. in Artificial Intelligence, and a Ph.D. in AI. My research focuses on computer vision, 3D geometry, and deep learning, with peer-reviewed publications in top venues and open-source contributions, including code that has been merged into OpenCV.
-              </p>
-              <p className="hero-subtitle">
-I previously co-founded XOIA Soft Dev., where I led the development of urban AR solutions, and drove computer-vision initiatives at The Graffter and New Horizon Technologies spanning Mixed Reality, robotics, video surveillance, and medical imaging products.
-              </p>
-              <p className="hero-subtitle">
-I currently serve as a Staff Machine Learning Engineer at Qualcomm XR Labs Europe, designing production-grade SLAM and SfM systems that power the next generation of AR/VR headsets.
+                I design robust perception systems that merge classical vision with modern machine learning to solve real-world SLAM and SfM challenges.
               </p>
               <div className="hero-actions">
                 <a className="hero-cta" href="#publications-section">
@@ -157,24 +395,19 @@ I currently serve as a Staff Machine Learning Engineer at Qualcomm XR Labs Europ
                 <a className="hero-cta hero-cta-secondary" href="#presentations-section">
                   Presentations
                 </a>
+                <a className="hero-cta hero-cta-secondary" href="#projects-section">
+                  Projects
+                </a>
               </div>
             </div>
           </section>
 
           <div className="container">
-            {/* <div className="text-justify">
-              <p>Bachelor in Computer Science, Master in Artificial Intelligence (AI), and PhD in AI.
-                I am a senior researcher in Computer Vision (CV). I have managed several CV and robotic projects that have been
-                presented in symposiums and journals. I also contribute to important libraries such as OpenCV.</p>
-              <p>Among a large list of projects I would like to highlight my contributions in The Graffter,
-                where I developed Augmented Reality technology for urban environment and XOIA Soft. Dev., a
-                company that I have co-founded and nowadays has more than 10 employees. I led the CV team of New Horizon
-                Technologies, developing several video surveillance, and medical image projects.</p>
-
-              <p>At the moment, I am a Senior Machine Learning Engineer at Qualcomm XR Labs Europe, where we are
-                creating a new generation of AR/VR headsets by using cutting-edge Deep Learning technology to improve
-                SLAM and SfM. </p>
-            </div> */}
+            <div className="text-justify">
+              <p>I hold a B.Sc. in Computer Science, an M.Sc. in Artificial Intelligence, and a Ph.D. in AI. My research focuses on computer vision and geometric deep learning, with peer-reviewed publications in leading venues and open-source contributions, including code merged into OpenCV.</p>
+              <p>I previously co-founded XOIA Soft Dev., where I led the delivery of urban augmented reality solutions, and drove computer-vision initiatives at The Graffter and New Horizon Technologies spanning surveillance, robotics, and medical imaging products.</p>
+              <p>I currently serve as a Senior Machine Learning Engineer at Qualcomm XR Labs Europe, designing production-grade SLAM and SfM systems that power the next generation of AR/VR headsets.</p>
+            </div>
             <br/>
             <div id="publications-section">
               <h2>Publications</h2>
@@ -256,187 +489,43 @@ I currently serve as a Staff Machine Learning Engineer at Qualcomm XR Labs Europ
 
             <div id="education-section">
               <h2>Education</h2>
-              <ul>
-                <li>
-                  <b>Research Internship - ETH Zürich</b> (2021)<br/>
-                  <p className="text-justify">
-                    During three amazing months I have been working in <a href="https://www.cvg.ethz.ch/">CVG</a> group
-                    of ETH under the supervision of Prof. Marc Pollefeys. I developed a project about geometric-aware line
-                    segment matching for SLAM systems.</p>
-                </li>
-                <li>
-                  <b>PhD - Universidad Politécnica de Madrid: Augmented Reality in Urban Environments</b> (2021)<br/>
-
-                  <p className="text-justify">
-                    In my PhD I created and improved the basics of Augmented Reality to move it towards Urban
-                    Environments. My research is centered in efficient detectors and descriptors for local image
-                    features such as corners or line segments where we have already published two articles. We are also
-                    working with RANSAC based geometric techniques to improve the estimation of the device pose in the
-                    world.</p>
-                  <Icon.ArrowRight/> &nbsp;
-                  <a href="https://oa.upm.es/69043" target="_blank" rel="noreferrer">thesis</a>, &nbsp;
-                  <a href={SlidesPhD} target="_blank" rel="noreferrer">slides</a>
-                </li><br/>
-                <li>
-                  <b>Master in Artificial Intelligence - Universidad Politécnica de Madrid</b> (2016)<br/>
-                  In this master I could learn about some important AI topics such as: Machine Learning, Computer
-                  Vision, Evolutionary Computing or Advanced Neural Networks.
-                  It was also one introduction to the research world and a first step into my PhD.<br/>
-                  <Icon.ArrowRight/> &nbsp;
-                  Project: <b>Prototipo de motor de realidad aumentada tridimensional para dispositivos móviles</b>.&nbsp;
-                  <a href="https://oa.upm.es/43350/1/TFM_XOANIAGO_SUAREZ_CANOSA.pdf" target="_blank" rel="noreferrer">thesis</a>, &nbsp;
-                  <a href={SlidesTFM} target="_blank" rel="noreferrer">slides</a>, &nbsp;
-                  <a href="https://youtu.be/NnIveZCbigk" target="_blank" rel="noreferrer">video</a> &nbsp;
-                </li><br/>
-                <li>
-                  <b>Bachelor in Computer Science - Universidade da Coruña</b> (2015)<br/>
-                  <Icon.ArrowRight/> &nbsp;
-                    Bachelor project: <b>Web application for the analysis of human behavior</b>.&nbsp;
-                      <a href="https://www.youtube.com/watch?v=VtWA3Z4OhHQ" target="_blank" rel="noreferrer">video</a>, &nbsp;
-                      <a href="https://github.com/iago-suarez/ancoweb-TFG" target="_blank" rel="noreferrer">source code</a>
-                </li>
-              </ul>
+              <div className="highlight-grid">
+                {educationHighlights.map((item, idx) => <HighlightCard key={idx} {...item}/>)}
+              </div>
             </div>
             <br/>
 
             <div id="teaching-section">
               <h2>Teaching</h2>
-              Teaching assistant in the following courses (2019 - 2021):
-              <ul>
-                <li><b>Deep Learning</b> - Master's Programme in Digital Innovation: Data Science. (English) &nbsp;
-                  <a href={DeepLearningGuide}>Learning Guide</a> </li>
-                <li><b>Pattern Recognition</b> - Computer Engineering degree. (Spanish) &nbsp;
-                  <a href={ReconocimientoGuide}>Learning Guide</a> </li>
-              </ul>
-              <br/>
-              Advisor of the following Bachelor and Master projects:
-              <ul>
-                <li>
-                  <b>Lomas, Vanesa </b> (2023). &nbsp;
-                    Detección de personas en imágenes omnidireccionales. Thesis (Master thesis).
-                </li>
-
-                <li>
-                  <b>García-Siñeriz Sánchez, Ignacio </b> (2021). &nbsp;
-                  <a href="http://oa.upm.es/68051/1/TFG_IGNACIO_GARCIA_SINERIZ_SANCHEZ.pdf" target="_blank" rel="noreferrer">
-                    Interfaz gráfica para el uso de Realidad Aumentada en Unity3D
-                  </a>. Proyecto Fin de Carrera.
-                </li>
-                <li>
-                  <b>Díaz Álvarez, Jorge </b> (2021). &nbsp;
-                  <a href="http://oa.upm.es/68007/1/TFG_JORGE_DIAZ_ALVAREZ.pdf" target="_blank" rel="noreferrer">
-                    Visión por computador para el uso de Realidad Aumentada en Unity3D
-                  </a>. Proyecto Fin de Carrera.
-                </li>
-                <li>
-                  <b>Wei, Tingyun</b> (2020). &nbsp;
-                  <a href="http://oa.upm.es/65861/1/TFM_TINGYUN_WEI.pdf" target="_blank" rel="noreferrer">
-                    A multi-platform comparison of local feature description methods
-                  </a>. Thesis (Master thesis).
-                </li>
-                <li>
-                  <b>Olivares Gil, Alicia</b> (2020). &nbsp;
-                  <a href="http://oa.upm.es/63767/1/TFM_ALICIA_OLIVARES_GIL.pdf" target="_blank" rel="noreferrer">
-                    Estudio sobre detectores y descriptores de segmentos rectilíneos
-                  </a>. Thesis (Master thesis)
-                </li>
-                <li>
-                  <b>Cobo Cabornero, Alejandro</b> (2019). &nbsp;
-                  <a href="http://oa.upm.es/55778/1/TFG_ALEJANDRO_COBO_CABORNERO.pdf" target="_blank" rel="noreferrer">
-                    Evaluación y optimización de un descriptor de características
-                  </a>. Proyecto Fin de Carrera.
-                </li>
-                <li>
-                  <b>Audante Ramos, Néstor Rafael</b> (2019). &nbsp;
-                  <a href="http://oa.upm.es/56021/1/TFM_NESTOR_RAFAEL_AUDANTE_RAMOS.pdf" target="_blank" rel="noreferrer">
-                    Simulación de entornos urbanos para el aprendizaje de descriptores locales de apariencia
-                  </a>. Thesis (Master thesis)
-                </li>
-                <li>
-                  <b>Sfeir Malavé, Ghesn Daniel</b> (2019).  &nbsp;
-                  <a href="http://oa.upm.es/55889/1/TFM_GHESN_DANIEL_SFEIR_MALAVE.pdf" target="_blank" rel="noreferrer">
-                    Learning highly efficient local image descriptors
-                  </a>. Thesis (Master thesis)
-                </li>
-              </ul>
+              <div className="highlight-grid">
+                {teachingHighlights.map((item, idx) => <HighlightCard key={idx} {...item}/>)}
+              </div>
 
             </div>
             <br/>
 
             <div id="presentations-section">
               <h2>Public Presentations</h2>
-              <ul>
-                <li><b>Extended Reality: Towards Spatial Intelligence</b>: Madrid Innovation Lab <a href="https://milmadrid.es/disfruta-el-verano-a-mil-summer-camp-2023/">Summer Camp</a> (2023).&nbsp;
-                <a href={SummerCampMIL23} target="_blank" rel="noreferrer">slides.pdf</a>,  &nbsp;
-                <a href="https://docs.google.com/presentation/d/1EM4jQSoufcEDOPeYmybGYD3QeBP7XHYx/edit?usp=sharing&ouid=103357012295063844651&rtpof=true&sd=true" target="_blank" rel="noreferrer">slides.pptx</a>,  &nbsp;
-                <a href="https://youtu.be/vkUojbPE_3o" target="_blank" rel="noreferrer">video (spanish)</a> </li>
-                <li><b>Sticking Points and Lines for Improved Image Matching</b>: International Computer Vision Summer School (ICVSS) 2022. <a href={PosterICVSS22} target="_blank" rel="noreferrer">poster</a></li>
-                <li><b>Master Universitario en Vision Artificial (URJC) 2021, 2020</b>: Augmented Reality in Urban Environments Seminar.&nbsp;
-                  <a href="https://youtu.be/zijWdXDjwb0"  target="_blank" rel="noreferrer">video</a>
-                </li>
-                <li><b>2019: 9th Iberian Conference on Pattern Recognition and Image Analysis (IbPRIA)</b>: BELID: Boosted Efficient Local Image Descriptor.&nbsp;
-                  <a href={SlidesIbPRIA18} target="_blank" rel="noreferrer">slides</a>
-                </li>
-                <li><b>2018 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</b>: FSG: A statistical approach to line detection via fast segments grouping.&nbsp;
-                  <a href={SlidesIROS18} target="_blank" rel="noreferrer">slides</a>
-                </li>
-                <li><b>TEDx OviedoUniversity 2017</b>: The power of the Augmented Reality (Workshop Speaker)</li>
-              </ul>
+              <div className="highlight-grid">
+                {presentationHighlights.map((item, idx) => <HighlightCard key={idx} {...item}/>)}
+              </div>
             </div>
             <br/>
 
             <div id="awards-section">
               <h2>Honors and Awards</h2>
-              <ul>
-                <li>Excellent PhD Award, Computer Science Faculty, Universidad Politécnica de Madrid (January, 2024), &nbsp;
-                  <a href="https://youtu.be/lznCqRtA6TE?si=0ImUd6yYpzXWebI7&t=6047" target="_blank" rel="noreferrer">recording</a>
-                </li>
-                <li>Reading Group Competition Award. International Computer Vision Summer School (ICVSS), 2022</li>
-                <li>Cum Laude PhD (November, 2021)</li>
-                <li>Best Student Paper Award of ibPRIA 2019</li>
-                <li>Best PhD Thesis Award in the ICT field of the Polytechnic University of Madrid (May, 2019), &nbsp;
-                  <a href="https://youtu.be/pJN94oZgqWY" target="_blank" rel="noreferrer">video</a>, &nbsp;
-                  <a href={PosterSymposiumUPM} target="_blank" rel="noreferrer">poster</a>
-                </li>
-                <li>Primer Premio al mejor Trabajo Fin de Grado de Soft. Libre (November, 2015)</li>
-              </ul>
+              <div className="highlight-grid awards-grid">
+                {awardHighlights.map((item, idx) => <HighlightCard key={idx} {...item}/>)}
+              </div>
             </div>
             <br/>
 
             <div id="projects-section">
               <h2>Other Projects</h2>
-              I am specially proud of the following companies/project:<br/><br/>
-              <ul>
-                <li>ML Circle. &nbsp;
-                  <a href="https://mlcircle.org/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
-                  <a href="https://www.meetup.com/madrid-machine-learning-meetup/" target="_blank" rel="noreferrer">meetup</a>, &nbsp;
-                  <a href="https://youtube.com/playlist?list=PLHeG8vnHL6C8mOU8K8vs2j9I7dSMYCgJQ&si=QQAqaV9PpU4w8aNZ" target="_blank" rel="noreferrer">previous talks</a>
-                </li>
-                <li>New Horizon Technologies ~ Apolo AI. &nbsp;
-                  <a href="https://www.apoloai.com/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
-                  <a href="https://cardia.ai/" target="_blank" rel="noreferrer">cardia</a>,  &nbsp;
-                  <a href={CardiaVideo} target="_blank" rel="noreferrer">video</a>
-                </li>
-                <li>XOIA Software Development. &nbsp;
-                  <a href="https://xoia.es/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
-                  <a href="https://youtu.be/gJum_Qv_Ws8" target="_blank" rel="noreferrer">video1</a>,  &nbsp;
-                  <a href="https://youtu.be/74K1lK3kQJM" target="_blank" rel="noreferrer">video2</a>
-                </li>
-                <li>The Graffter. &nbsp;
-                  <a href="http://www.thegraffter.com/en/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
-                  <a href="https://www.youtube.com/channel/UCaA4tTBqW6Wbkxz1Ep-4szw" target="_blank" rel="noreferrer">videos1</a>,  &nbsp;
-                  <a href="https://youtu.be/XIBLZUiOKmc" target="_blank" rel="noreferrer">video2</a>
-                </li>
-                <li>Bookker. &nbsp;
-                  <a href="https://www.bookkercorp.com/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
-                  <a href="https://youtu.be/hM3mOG7bLEU" target="_blank" rel="noreferrer">video1</a>,  &nbsp;
-                  <a href="https://youtu.be/pYOwr3o-AWY" target="_blank" rel="noreferrer">video2</a>
-                </li>
-                {/*<li>Eation Tech. &nbsp;<a href="https://www.eationtech.com/">webpage</a>, &nbsp;<a href="https://youtu.be/0cbVPS4-VEQ">video</a></li>*/}
-                <li>White Mirror. &nbsp;<a href="https://www.whitemirror.es/" target="_blank" rel="noreferrer">webpage</a>,  &nbsp;
-                <a href="/wool-ar/" target="_blank" rel="noreferrer">Online Demo</a>
-                </li>
-              </ul>
+              <p className="section-subtitle">Selected collaborations that blend computer vision research with real-world impact.</p>
+              <div className="highlight-grid">
+                {projectHighlights.map((item, idx) => <HighlightCard key={idx} {...item}/>)}
+              </div>
             </div>
             <br/>
             <div>

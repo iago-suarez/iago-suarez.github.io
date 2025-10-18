@@ -239,6 +239,154 @@ code {
   color: var(--color-accent-hover);
 }
 
+.section-subtitle {
+  margin-top: 6px;
+  color: var(--color-muted-text);
+  font-size: 0.95rem;
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.highlight-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 16px 30px -26px rgba(10, 31, 51, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+}
+
+.highlight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 36px -22px rgba(10, 31, 51, 0.5);
+}
+
+.highlight-card-header {
+  display: flex;
+  gap: 14px;
+}
+
+.highlight-card-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(61, 139, 253, 0.12);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.highlight-card-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.highlight-card-title {
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-heading);
+}
+
+.highlight-card-subtitle {
+  margin: 2px 0 0 0;
+  font-size: 0.9rem;
+  color: var(--color-muted-text);
+}
+
+.highlight-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.highlight-card-tag {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(61, 139, 253, 0.15);
+  color: var(--color-accent);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.highlight-card-description {
+  margin: 0;
+  color: var(--color-body-text);
+  line-height: 1.45;
+}
+
+.highlight-card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.highlight-card-links a {
+  font-weight: 500;
+}
+
+.highlight-list {
+  margin: 12px 0 0 16px;
+  padding: 0;
+  color: var(--color-body-text);
+  font-size: 0.9rem;
+}
+
+.highlight-list li {
+  margin-bottom: 6px;
+}
+
+.awards-grid .highlight-card {
+  padding: 16px;
+  gap: 8px;
+}
+
+.awards-grid .highlight-card-icon {
+  background: rgba(10, 31, 51, 0.12);
+  color: var(--color-heading);
+}
+
+details > summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: 6px;
+  display: inline-flex;
+  align-items: center;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] > summary {
+  color: var(--color-accent-hover);
+}
+
+details > summary::after {
+  content: '›';
+  font-size: 1.1rem;
+  margin-left: 6px;
+  transition: transform 0.2s ease;
+}
+
+details[open] > summary::after {
+  transform: rotate(90deg);
+}
+
 .vertical-center {
   min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
   min-height: 100vh; /* These two lines are counted as one :-)       */
