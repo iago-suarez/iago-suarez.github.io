@@ -12,6 +12,7 @@ import PosterICVSS22 from '../documents/Poster_ICVSS22_Iago_Suarez.pdf'
 import SummerCampMIL23 from '../documents/SummerCampMIL23.pdf'
 import ImgELSED from '../images/ELSED.jpg'
 import ImgGlueStick from '../images/gluestick.gif'
+import ImgWireframe from '../images/WireframeDetector.gif'
 import ImgFSG from '../images/FsgIros18.gif'
 import ImgBelid from '../images/BelidImg.png'
 import ImgBeblid from '../images/BeblidImg.png'
@@ -139,6 +140,16 @@ function Home () {
             <br/>
             <div id="publications-section">
               <h2>Publications</h2>
+              <Publication name="Learning to Detect and Describe a Wireframe"
+                           img={ImgWireframe}
+                           authors_year="Ferre, I., Baumela, L., & Suárez, I. (2025)"
+                           venue={<span><i>IbPRIA 2025</i>. Accepted manuscript.</span>}
+                           links={[
+                             <a href="https://github.com/iferfra/wireframe-detector/blob/main/paper/Learning%20to%20Detect%20and%20Describe%20a%20Wireframe.pdf">Paper</a>,
+                             <a href="https://github.com/iferfra/wireframe-detector">Code</a>,
+                             <a href="https://huggingface.co/spaces/iferfra/wireframe-detector">🤗 Demo</a>,
+                             <a href="https://doi.org/10.1007/978-3-031-99565-1_28">DOI</a>
+                           ]}/>
               <Publication name="GlueStick: Robust Image Matching by Sticking Points and Lines Together"
                            img={ImgGlueStick}
                            authors_year={<span>Pautrat, R.<sup>*</sup>, Suárez, I.<sup>*</sup>, Yu, Y., Pollefeys, M., Larsson, V. (2023)</span>}
