@@ -66,8 +66,8 @@ function Home () {
             <li className="mypicture-container">
               <img src={mypicture} className="img-fluid rounded-circle img-thumbnail" alt="Iago Suárez"/>
             </li>
-            <li className="sidebar-divider" aria-hidden="true"></li>
-            <li className="sidebar-link-item">
+            {/* <li className="sidebar-divider" aria-hidden="true"></li> */}
+            {/* <li className="sidebar-link-item">
               <a className="sidebar-link" href="#publications-section">Publications</a>
             </li>
             <li className="sidebar-link-item">
@@ -75,7 +75,7 @@ function Home () {
             </li>
             <li className="sidebar-link-item">
               <a className="sidebar-link" href="#projects-section">Projects</a>
-            </li>
+            </li> */}
             <li className="sidebar-divider" aria-hidden="true"></li>
             <li className="sidebar-social-item">
               <a className="sidebar-social-link" href="https://github.com/iago-suarez">
@@ -133,7 +133,7 @@ function Home () {
 
           <section className="hero-section">
             <div>
-              <h2 className="hero-heading">Senior ML Engineer · Computer Vision Researcher</h2>
+              <h2 className="hero-heading">Staff ML Engineer · Computer Vision Researcher</h2>
               <p className="hero-tagline">Qualcomm XR Labs Europe</p>
               <p className="hero-subtitle">
                 I hold a B.Sc. in Computer Science, an M.Sc. in Artificial Intelligence, and a Ph.D. in AI. My research focuses on computer vision, 3D geometry, and deep learning, with peer-reviewed publications in top venues and open-source contributions, including code that has been merged into OpenCV.
@@ -142,7 +142,7 @@ function Home () {
 I previously co-founded XOIA Soft Dev., where I led the development of urban AR solutions, and drove computer-vision initiatives at The Graffter and New Horizon Technologies spanning Mixed Reality, robotics, video surveillance, and medical imaging products.
               </p>
               <p className="hero-subtitle">
-I currently serve as a Senior Machine Learning Engineer at Qualcomm XR Labs Europe, designing production-grade SLAM and SfM systems that power the next generation of AR/VR headsets.
+I currently serve as a Staff Machine Learning Engineer at Qualcomm XR Labs Europe, designing production-grade SLAM and SfM systems that power the next generation of AR/VR headsets.
               </p>
               <div className="hero-actions">
                 <a className="hero-cta" href="#publications-section">
