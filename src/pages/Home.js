@@ -66,34 +66,37 @@ function Home () {
             <li className="mypicture-container">
               <img src={mypicture} className="img-fluid rounded-circle img-thumbnail" alt="Iago Suárez"/>
             </li>
-            <li>
-              <a href="#publications-section">Publications</a>
+            <li className="sidebar-divider" aria-hidden="true"></li>
+            <li className="sidebar-link-item">
+              <a className="sidebar-link" href="#publications-section">Publications</a>
             </li>
-            <li>
-              <a href="#education-section">Education</a>
+            <li className="sidebar-link-item">
+              <a className="sidebar-link" href="#education-section">Education</a>
             </li>
-            <li>
-              <a href="#projects-section">Projects</a>
+            <li className="sidebar-link-item">
+              <a className="sidebar-link" href="#projects-section">Projects</a>
             </li>
-            <li>
-              <div className="container">
-                <div className="row">
-                  <div className="col-sm">
-                    <a className="medium-icon social-icon" href="https://github.com/iago-suarez"><Icon.Github/></a>
-                  </div>
-                  <div className="col-sm">
-                    <a className="medium-icon social-icon"
-                       href="https://scholar.google.es/citations?user=6CRh05wAAAAJ&hl=es&oi=ao"><Icon.Book/></a>
-                  </div>
-                  <div className="col-sm">
-                    <a className="medium-icon social-icon"
-                       href="https://twitter.com/IagoSuarez0"><Icon.Twitter/></a>
-                  </div>
-                  <div className="col-sm">
-                    <a className="medium-icon social-icon" href="https://www.linkedin.com/in/iago-suarez/"><Icon.Linkedin/></a>
-                  </div>
-                </div>
-              </div>
+            <li className="sidebar-divider" aria-hidden="true"></li>
+            <li className="sidebar-social-item">
+              <a className="sidebar-social-link" href="https://github.com/iago-suarez">
+                <Icon.Github className="sidebar-social-icon"/>&nbsp; GitHub
+              </a>
+            </li>
+            <li className="sidebar-social-item">
+              <a className="sidebar-social-link"
+                 href="https://scholar.google.es/citations?user=6CRh05wAAAAJ&hl=es&oi=ao">
+                <Icon.Book className="sidebar-social-icon"/>&nbsp; Scholar
+              </a>
+            </li>
+            <li className="sidebar-social-item">
+              <a className="sidebar-social-link" href="https://twitter.com/IagoSuarez0">
+                <Icon.Twitter className="sidebar-social-icon"/>&nbsp; Twitter
+              </a>
+            </li>
+            <li className="sidebar-social-item">
+              <a className="sidebar-social-link" href="https://www.linkedin.com/in/iago-suarez/">
+                <Icon.Linkedin className="sidebar-social-icon"/>&nbsp; LinkedIn
+              </a>
             </li>
           </ul>
         </div>
