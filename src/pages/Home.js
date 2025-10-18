@@ -33,14 +33,19 @@ function Publication(props) {
           <img src={props.img} className="card-img-top pub-image" alt="Publication image"></img>
         </div>
         <div className="col-md-9">
-          <p className="pub-text-title pub-text-p ">{props.name}</p>
+          <p className="pub-text-title pub-text-p">{props.name}</p>
           <p className="pub-text-authors pub-text-p">{props.authors_year}</p>
-          <p className="pub-text-p">{props.venue}</p>
+          <p className="pub-text-p pub-text-venue">{props.venue}</p>
           <p className="pub-text-p">
-            {props.links.map((tag, i) => <span key={i}> {i > 0 && "| "}
-              <a href={tag.props.href} target="_blank" rel="noreferrer">{tag.props.children}</a>
-            </span>)
-            }
+            {props.links.map((tag, i) => {
+              const { href, children, target, rel, ...restProps } = tag.props
+              return <span key={i}> {i > 0 && "| "}
+                <a href={href}
+                   target={target || '_blank'}
+                   rel={rel || 'noreferrer'}
+                   {...restProps}>{children}</a>
+              </span>
+            })}
           </p>
         </div>
       </div>
@@ -53,7 +58,7 @@ function Home () {
     <div className="App">
       <div id="wrapper">
         {/*Sidebar*/}
-        <div id="sidebar-wrapper" className="bg-dark">
+        <div id="sidebar-wrapper">
           <ul className="sidebar-nav">
             <li>
               <h1 className="text-white text-decoration-none">Iago Suárez</h1>
@@ -143,7 +148,7 @@ function Home () {
               <Publication name="Learning to Detect and Describe a Wireframe"
                            img={ImgWireframe}
                            authors_year="Ferre, I., Baumela, L., & Suárez, I. (2025)"
-                           venue={<span><i>IbPRIA 2025</i>. Accepted manuscript.</span>}
+                           venue={<span className="pub-venue"><span className="pub-venue-name">IbPRIA 2025</span>. Accepted manuscript.</span>}
                            links={[
                              <a href="https://github.com/iferfra/wireframe-detector/blob/main/paper/Learning%20to%20Detect%20and%20Describe%20a%20Wireframe.pdf">Paper</a>,
                              <a href="https://github.com/iferfra/wireframe-detector">Code</a>,
@@ -153,7 +158,7 @@ function Home () {
               <Publication name="GlueStick: Robust Image Matching by Sticking Points and Lines Together"
                            img={ImgGlueStick}
                            authors_year={<span>Pautrat, R.<sup>*</sup>, Suárez, I.<sup>*</sup>, Yu, Y., Pollefeys, M., Larsson, V. (2023)</span>}
-                           venue={<span><sup>*</sup>Equal contribution.  &nbsp; <i>ICCV 2023</i>.</span>}
+                           venue={<span className="pub-venue"><sup>*</sup>Equal contribution.&nbsp;<span className="pub-venue-name">ICCV 2023</span>.</span>}
                            links={[
                              <a href="https://arxiv.org/pdf/2304.02008.pdf">Paper</a>,
                              <a href="https://github.com/cvg/GlueStick">Code</a>,
@@ -164,7 +169,7 @@ function Home () {
               <Publication name="ELSED: Enhanced Line SEgment Drawing"
                            img={ImgELSED}
                            authors_year="Suárez, I., Buenaposada, J. M., & Baumela, L. (2022)"
-                           venue={<span><i>Pattern Recognition</i>, 127, 108619.</span>}
+                           venue={<span className="pub-venue"><span className="pub-venue-name">Pattern Recognition</span>, 127, 108619.</span>}
                            links={[
                              <a href="https://www.sciencedirect.com/science/article/pii/S0031320322001005/pdfft?md5=30d73760c68b632196efe2f0a1745a94&pid=1-s2.0-S0031320322001005-main.pdf">Paper</a>,
                              <a href="https://github.com/iago-suarez/ELSED">Code (C++)</a>,
@@ -175,7 +180,7 @@ function Home () {
               <Publication name="Revisiting Binary Local Image Description for Resource Limited Devices"
                            img={ImgRAL21}
                            authors_year="Suárez, I., Buenaposada, J. M., & Baumela, L. (2021)"
-                           venue={<span><i> IEEE Robotics and Automation Letters</i>, 6(4), 8317-8324.</span>}
+                           venue={<span className="pub-venue"><span className="pub-venue-name">IEEE Robotics and Automation Letters</span>, 6(4), 8317-8324.</span>}
                            links={[
                              <a href="https://arxiv.org/abs/2108.08380">Paper</a>,
                              <a href="https://github.com/iago-suarez/efficient-descriptors">Code (C++)</a>,
@@ -187,7 +192,7 @@ function Home () {
               <Publication name="BEBLID: Boosted efficient binary local image descriptor"
                            img={ImgBeblid}
                            authors_year="Suárez, I., Sfeir, G., Buenaposada, J. M., & Baumela, L. (2020)."
-                           venue={<span><i>Pattern Recognition Letters</i>, 133, 366-372.</span>}
+                           venue={<span className="pub-venue"><span className="pub-venue-name">Pattern Recognition Letters</span>, 133, 366-372.</span>}
                            links={[
                              <a href="http://www.dia.fi.upm.es/~pcr/publications/PRL_2020_web_BEBLID.pdf">Paper</a>,
                              <a href="https://github.com/iago-suarez/BEBLID">Code (C++)</a>,
@@ -197,7 +202,7 @@ function Home () {
               <Publication name="BELID: Boosted efficient local image descriptor"
                            img={ImgBelid}
                            authors_year="Suárez, I., Sfeir, G., Buenaposada, J. M., & Baumela, L. (2019, July)"
-                           venue={<span><i>Iberian Conference on Pattern Recognition and Image Analysis (IbPRIA)</i> (pp. 449-460).</span>}
+                           venue={<span className="pub-venue"><span className="pub-venue-name">Iberian Conference on Pattern Recognition and Image Analysis (IbPRIA)</span> (pp. 449-460).</span>}
                            links={[
                              <a href="http://www.dia.fi.upm.es/~pcr/publications/ibpria2019.pdf">Paper</a>,
                              <a href="https://doi.org/10.1007/978-3-030-31332-6_39">DOI</a>
@@ -205,7 +210,7 @@ function Home () {
               <Publication name="FSG: A statistical approach to line detection via fast segments grouping"
                            img={ImgFSG}
                            authors_year="Suárez, I., Muñoz, E., Buenaposada, J. M., & Baumela, L. (2018, October)"
-                           venue={<span><i>International Conference on Intelligent Robots and Systems (IROS)</i> (pp. 97-102).</span>}
+                           venue={<span className="pub-venue"><span className="pub-venue-name">International Conference on Intelligent Robots and Systems (IROS)</span> (pp. 97-102).</span>}
                            links={[
                              <a href="http://www.dia.fi.upm.es/~pcr/publications/iros2018.pdf">Paper</a>,
                              <a href="https://github.com/iago-suarez/FSG">Code (C++)</a>,
