@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.d23c992a.css",
-    "main.js": "/static/js/main.cd55f98c.js",
+    "main.css": "/static/css/main.d4f99dc9.css",
+    "main.js": "/static/js/main.f1413613.js",
     "static/js/787.93b0a6bc.chunk.js": "/static/js/787.93b0a6bc.chunk.js",
     "static/media/vanishing.mp4": "/static/media/vanishing.c8392133d85dbb195b84.mp4",
     "static/media/Slides_IROS18.pdf": "/static/media/Slides_IROS18.83669e7002e92960b943.pdf",
@@ -24,14 +24,14 @@
     "static/media/FeatureDescription.jpg": "/static/media/FeatureDescription.f1032098e25db88bdf17.jpg",
     "static/media/BeblidImg.png": "/static/media/BeblidImg.5b8c713ad3fbac90ccd5.png",
     "static/media/BelidImg.png": "/static/media/BelidImg.c824f410b928f5b84f87.png",
-    "static/media/mypicture.jpg": "/static/media/mypicture.55c0820056d403e4d060.jpg",
+    "static/media/mypicture.jpg": "/static/media/mypicture.bc93879b9b3d3fd7903a.jpg",
     "index.html": "/index.html",
-    "main.d23c992a.css.map": "/static/css/main.d23c992a.css.map",
-    "main.cd55f98c.js.map": "/static/js/main.cd55f98c.js.map",
+    "main.d4f99dc9.css.map": "/static/css/main.d4f99dc9.css.map",
+    "main.f1413613.js.map": "/static/js/main.f1413613.js.map",
     "787.93b0a6bc.chunk.js.map": "/static/js/787.93b0a6bc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d23c992a.css",
-    "static/js/main.cd55f98c.js"
+    "static/css/main.d4f99dc9.css",
+    "static/js/main.f1413613.js"
   ]
 }
