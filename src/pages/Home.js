@@ -131,8 +131,38 @@ function Home () {
 
           <br/><br/>
 
+          <section className="hero-section">
+            <div>
+              <h2 className="hero-heading">Senior ML Engineer · Computer Vision Researcher</h2>
+              <p className="hero-tagline">Qualcomm XR Labs Europe</p>
+              <p className="hero-subtitle">
+                I hold a B.Sc. in Computer Science, an M.Sc. in Artificial Intelligence, and a Ph.D. in AI. My research focuses on computer vision, 3D geometry, and deep learning, with peer-reviewed publications in top venues and open-source contributions, including code that has been merged into OpenCV.
+              </p>
+              <p className="hero-subtitle">
+I previously co-founded XOIA Soft Dev., where I led the development of urban AR solutions, and drove computer-vision initiatives at The Graffter and New Horizon Technologies spanning Mixed Reality, robotics, video surveillance, and medical imaging products.
+              </p>
+              <p className="hero-subtitle">
+I currently serve as a Senior Machine Learning Engineer at Qualcomm XR Labs Europe, designing production-grade SLAM and SfM systems that power the next generation of AR/VR headsets.
+              </p>
+              <div className="hero-actions">
+                <a className="hero-cta" href="#publications-section">
+                  View Publications
+                </a>
+                <a className="hero-cta hero-cta-secondary" href="#education-section">
+                  Education
+                </a>
+                <a className="hero-cta hero-cta-secondary" href="#teaching-section">
+                  Teaching
+                </a>
+                <a className="hero-cta hero-cta-secondary" href="#presentations-section">
+                  Presentations
+                </a>
+              </div>
+            </div>
+          </section>
+
           <div className="container">
-            <div className="text-justify">
+            {/* <div className="text-justify">
               <p>Bachelor in Computer Science, Master in Artificial Intelligence (AI), and PhD in AI.
                 I am a senior researcher in Computer Vision (CV). I have managed several CV and robotic projects that have been
                 presented in symposiums and journals. I also contribute to important libraries such as OpenCV.</p>
@@ -144,7 +174,7 @@ function Home () {
               <p>At the moment, I am a Senior Machine Learning Engineer at Qualcomm XR Labs Europe, where we are
                 creating a new generation of AR/VR headsets by using cutting-edge Deep Learning technology to improve
                 SLAM and SfM. </p>
-            </div>
+            </div> */}
             <br/>
             <div id="publications-section">
               <h2>Publications</h2>

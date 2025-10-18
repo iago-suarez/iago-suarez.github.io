@@ -127,10 +127,7 @@ code {
 }
 
 .pub-card-container {
-  padding-left: 26px;
-  padding-right: 26px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding: 18px 26px;
 }
 
 .pub-image-pane {
@@ -165,6 +162,81 @@ code {
 
 .pub-details-pane .pub-text-p:last-child {
   margin-bottom: 0;
+}
+
+.hero-section {
+  max-width: 1060px;
+  margin: 0 auto 36px;
+  padding: 32px 40px;
+  background: linear-gradient(135deg, rgba(61, 139, 253, 0.15), rgba(10, 31, 51, 0.08));
+  border: 1px solid rgba(61, 139, 253, 0.2);
+  box-shadow: 0 20px 40px -30px rgba(10, 31, 51, 0.6);
+  border-radius: 18px;
+  color: var(--color-body-text);
+}
+
+.hero-tagline {
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.hero-heading {
+  font-size: 2.15rem;
+  line-height: 1.3;
+  color: var(--color-heading);
+  margin-bottom: 16px;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-muted-text);
+}
+
+.hero-actions {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  box-shadow: 0 12px 24px -16px rgba(61, 139, 253, 0.9);
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.hero-cta:hover,
+.hero-cta:focus {
+  background: var(--color-accent-hover);
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero-cta-secondary {
+  background: transparent;
+  color: var(--color-accent);
+  border-color: rgba(61, 139, 253, 0.45);
+  box-shadow: none;
+}
+
+.hero-cta-secondary:hover,
+.hero-cta-secondary:focus {
+  background: rgba(61, 139, 253, 0.12);
+  color: var(--color-accent-hover);
 }
 
 .vertical-center {
@@ -226,10 +298,7 @@ code {
 
 @media (max-width: 767px) {
   .pub-card-container {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding: 16px 20px;
   }
 
   .pub-image-pane {
@@ -247,5 +316,18 @@ code {
 
   .pub-details-pane {
     padding-left: 0;
+  }
+
+  .hero-section {
+    margin: 0 16px 32px;
+    padding: 26px 22px;
+  }
+
+  .hero-inner {
+    max-width: 100%;
+  }
+
+  .hero-heading {
+    font-size: 1.7rem;
   }
 }
