@@ -27,16 +27,16 @@ import Carousel from 'react-bootstrap/Carousel'
 function Publication(props) {
   //return <h1>Hello, {props.name}</h1>;
   return <div className="card pub-card">
-    <div className="container-fluid">
+    <div className="container-fluid pub-card-container">
       <div className="row pub-row">
-        <div className="col-md-3 vcenter-item">
+        <div className="col-md-3 vcenter-item pub-image-pane">
           <img src={props.img} className="card-img-top pub-image" alt="Publication image"></img>
         </div>
-        <div className="col-md-9">
+        <div className="col-md-9 pub-details-pane">
           <p className="pub-text-title pub-text-p">{props.name}</p>
           <p className="pub-text-authors pub-text-p">{props.authors_year}</p>
           <p className="pub-text-p pub-text-venue">{props.venue}</p>
-          <p className="pub-text-p">
+          <p className="pub-text-p pub-links">
             {props.links.map((tag, i) => {
               const { href, children, target, rel, ...restProps } = tag.props
               return <span key={i}> {i > 0 && "| "}
@@ -79,23 +79,23 @@ function Home () {
             <li className="sidebar-divider" aria-hidden="true"></li>
             <li className="sidebar-social-item">
               <a className="sidebar-social-link" href="https://github.com/iago-suarez">
-                <Icon.Github className="sidebar-social-icon"/>&nbsp; GitHub
+                <Icon.Github className="sidebar-social-icon"/> GitHub
               </a>
             </li>
             <li className="sidebar-social-item">
               <a className="sidebar-social-link"
                  href="https://scholar.google.es/citations?user=6CRh05wAAAAJ&hl=es&oi=ao">
-                <Icon.Book className="sidebar-social-icon"/>&nbsp; Scholar
+                <Icon.Book className="sidebar-social-icon"/> Scholar
               </a>
             </li>
             <li className="sidebar-social-item">
               <a className="sidebar-social-link" href="https://twitter.com/IagoSuarez0">
-                <Icon.Twitter className="sidebar-social-icon"/>&nbsp; Twitter
+                <Icon.Twitter className="sidebar-social-icon"/> Twitter
               </a>
             </li>
             <li className="sidebar-social-item">
               <a className="sidebar-social-link" href="https://www.linkedin.com/in/iago-suarez/">
-                <Icon.Linkedin className="sidebar-social-icon"/>&nbsp; LinkedIn
+                <Icon.Linkedin className="sidebar-social-icon"/> LinkedIn
               </a>
             </li>
           </ul>

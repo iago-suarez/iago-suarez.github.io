@@ -91,16 +91,25 @@ code {
 }
 
 .pub-row {
-  padding: 7px;
-  margin: 2px;
+  padding: 0;
+  margin: 0;
+  align-items: stretch;
 }
 
 .pub-card {
-  margin: 7px;
+  margin: 8px auto;
   background: var(--color-card-bg);
   border: 1px solid var(--color-card-border);
   box-shadow: 0 12px 24px -18px var(--color-card-shadow);
   border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 1060px;
+}
+
+.pub-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 32px -18px rgba(10, 31, 51, 0.18);
 }
 
 .pub-text-authors {
@@ -115,6 +124,47 @@ code {
 .pub-venue-name {
   font-style: italic;
   letter-spacing: 0.01em;
+}
+
+.pub-card-container {
+  padding-left: 26px;
+  padding-right: 26px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.pub-image-pane {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 26px;
+  margin-right: 26px;
+  flex: 0 0 200px !important;
+  max-width: 200px !important;
+}
+
+.pub-image-pane::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 1px;
+  height: 80%;
+  background: linear-gradient(180deg, rgba(213, 225, 243, 0), rgba(213, 225, 243, 0.85), rgba(213, 225, 243, 0));
+}
+
+.pub-details-pane {
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 calc(100% - 200px) !important;
+  max-width: calc(100% - 200px) !important;
+}
+
+.pub-details-pane .pub-text-p:last-child {
+  margin-bottom: 0;
 }
 
 .vertical-center {
@@ -161,4 +211,41 @@ code {
 
 .code-like-font {
   font-family: monospace;
+}
+
+@media (max-width: 991px) {
+  .pub-image {
+    max-height: 160px;
+  }
+
+  .pub-card {
+    margin: 10px 6px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .pub-card-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .pub-image-pane {
+    flex: 0 0 auto;
+    max-width: none;
+    padding-right: 0;
+    margin-right: 0;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+
+  .pub-image-pane::after {
+    display: none;
+  }
+
+  .pub-details-pane {
+    padding-left: 0;
+  }
 }
