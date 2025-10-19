@@ -8,6 +8,10 @@ body {
     overflow-x: hidden;
 }
 
+.container {
+    overflow: visible;
+}
+
 .mypicture-container {
     text-align: center;
     text-indent: 0px !important;

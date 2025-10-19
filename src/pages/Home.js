@@ -80,8 +80,50 @@ function HighlightCard ({ icon: IconComponent, title, subtitle, description, tag
   </div>
 }
 
+function EducationTimeline ({ items }) {
+  return <div className="education-timeline">
+    <div className="education-timeline-line"></div>
+    {items.map((item, idx) => {
+      return <div className="education-timeline-item" key={idx}>
+        <p className="education-label education-label-top">{item.title}</p>
+        <div className="education-node">
+          <div className="education-circle" tabIndex={0}>
+            <div className="education-card">
+              <p className="education-card-heading">{item.title}</p>
+              <p className="education-card-subheading">{item.subtitle}</p>
+              <p className="education-card-description">{item.description}</p>
+              {item.tags.length > 0 && <div className="education-card-tags">
+                {item.tags.map((tag, tagIdx) => <span className="highlight-card-tag" key={tagIdx}>{tag}</span>)}
+              </div>}
+              {item.links.length > 0 && <div className="education-card-links">
+                {item.links.map((link, linkIdx) =>
+                  <a key={linkIdx}
+                     href={link.href}
+                     target={link.target || '_blank'}
+                     rel={link.rel || 'noreferrer'}>{link.label}</a>)}
+              </div>}
+            </div>
+          </div>
+        </div>
+        <p className="education-label education-label-bottom">{item.subtitle}</p>
+      </div>
+    })}
+  </div>
+}
+
 function Home () {
   const educationHighlights = [
+    {
+      icon: Icon.Laptop,
+      title: 'B.Sc. in Computer Science',
+      subtitle: 'Universidade da Coruña · 2015',
+      description: 'Developed AncoWeb, a behavioural analytics platform for understanding user interactions, graduating with highest honours.',
+      tags: ['Full-Stack', 'Behaviour Analytics'],
+      links: [
+        { label: 'Project video', href: 'https://www.youtube.com/watch?v=VtWA3Z4OhHQ' },
+        { label: 'Source code', href: 'https://github.com/iago-suarez/ancoweb-TFG' }
+      ]
+    },
     {
       icon: Icon.Cpu,
       title: 'M.Sc. in Artificial Intelligence',
@@ -94,15 +136,14 @@ function Home () {
         { label: 'Demo video', href: 'https://youtu.be/NnIveZCbigk' }
       ]
     },
-        {
-      icon: Icon.Laptop,
-      title: 'B.Sc. in Computer Science',
-      subtitle: 'Universidade da Coruña · 2015',
-      description: 'Developed AncoWeb, a behavioural analytics platform for understanding user interactions, graduating with highest honours.',
-      tags: ['Full-Stack', 'Behaviour Analytics'],
+    {
+      icon: Icon.Globe,
+      title: 'Research Internship',
+      subtitle: 'ETH Zürich — CVG Lab · 2021',
+      description: 'Collaborated with Prof. Marc Pollefeys on geometric-aware line segment matching for SLAM, combining learned features with robust multi-view geometry.',
+      tags: ['SLAM', 'Feature Matching'],
       links: [
-        { label: 'Project video', href: 'https://www.youtube.com/watch?v=VtWA3Z4OhHQ' },
-        { label: 'Source code', href: 'https://github.com/iago-suarez/ancoweb-TFG' }
+        { label: 'CVG Lab', href: 'https://www.cvg.ethz.ch/' }
       ]
     },
     {
@@ -114,16 +155,6 @@ function Home () {
       links: [
         { label: 'Thesis', href: 'https://oa.upm.es/69043' },
         { label: 'Defense slides', href: SlidesPhD }
-      ]
-    },
-    {
-      icon: Icon.Globe,
-      title: 'Research Internship',
-      subtitle: 'ETH Zürich — CVG Lab · 2021',
-      description: 'Collaborated with Prof. Marc Pollefeys on geometric-aware line segment matching for SLAM, combining learned features with robust multi-view geometry.',
-      tags: ['SLAM', 'Feature Matching'],
-      links: [
-        { label: 'CVG Lab', href: 'https://www.cvg.ethz.ch/' }
       ]
     }
   ]
@@ -489,7 +520,8 @@ function Home () {
 
             <div id="education-section">
               <h2>Education</h2>
-              <div className="highlight-grid">
+              <EducationTimeline items={educationHighlights}/>
+              <div className="education-mobile-grid">
                 {educationHighlights.map((item, idx) => <HighlightCard key={idx} {...item}/>)}
               </div>
             </div>
