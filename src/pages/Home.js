@@ -15,6 +15,12 @@ import ImgELSED from '../images/ELSED.jpg'
 import ImgGlueStick from '../images/gluestick.gif'
 import ImgWireframe from '../images/WireframeDetector.gif'
 import ImgLightGlueStick from '../images/LightGlueStick.jpg'
+import ImgMlCircleBackground from '../images/MlCircleBackground.jpg'
+import ImgCardiaBackground from '../images/CardiaBackground.jpg'
+import ImgXoiaBackground from '../images/XoiaBackground.jpg'
+import ImgBookkerBackground from '../images/BookkerBackground.jpg'
+import ImgWhiteMirrorBackground from '../images/WhiteMirrorBackground.jpg'
+import ImgGraffterBackground from '../images/GraffterBackground.jpg'
 import ImgFSG from '../images/FsgIros18.gif'
 import ImgBelid from '../images/BelidImg.png'
 import ImgBeblid from '../images/BeblidImg.png'
@@ -25,6 +31,8 @@ import '../App.css'
 import '../Sidebar.css'
 import * as Icon from 'react-bootstrap-icons'
 import Carousel from 'react-bootstrap/Carousel'
+import { motion } from 'framer-motion'
+import { ProjectCard } from '../components/ProjectCard'
 
 function Publication(props) {
   //return <h1>Hello, {props.name}</h1>;
@@ -432,38 +440,97 @@ I currently serve as a Staff Machine Learning Engineer at Qualcomm XR Labs Europ
 
             <div id="projects-section">
               <h2>Other Projects</h2>
-              I am specially proud of the following companies/project:<br/><br/>
-              <ul>
-                <li>ML Circle. &nbsp;
-                  <a href="https://mlcircle.org/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
-                  <a href="https://www.meetup.com/madrid-machine-learning-meetup/" target="_blank" rel="noreferrer">meetup</a>, &nbsp;
-                  <a href="https://youtube.com/playlist?list=PLHeG8vnHL6C8mOU8K8vs2j9I7dSMYCgJQ&si=QQAqaV9PpU4w8aNZ" target="_blank" rel="noreferrer">previous talks</a>
-                </li>
-                <li>New Horizon Technologies ~ Apolo AI. &nbsp;
-                  <a href="https://www.apoloai.com/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
-                  <a href="https://cardia.ai/" target="_blank" rel="noreferrer">cardia</a>,  &nbsp;
-                  <a href={CardiaVideo} target="_blank" rel="noreferrer">video</a>
-                </li>
-                <li>XOIA Software Development. &nbsp;
-                  <a href="https://xoia.es/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
-                  <a href="https://youtu.be/gJum_Qv_Ws8" target="_blank" rel="noreferrer">video1</a>,  &nbsp;
-                  <a href="https://youtu.be/74K1lK3kQJM" target="_blank" rel="noreferrer">video2</a>
-                </li>
-                <li>The Graffter. &nbsp;
-                  <a href="http://www.thegraffter.com/en/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
-                  <a href="https://www.youtube.com/channel/UCaA4tTBqW6Wbkxz1Ep-4szw" target="_blank" rel="noreferrer">videos1</a>,  &nbsp;
-                  <a href="https://youtu.be/XIBLZUiOKmc" target="_blank" rel="noreferrer">video2</a>
-                </li>
-                <li>Bookker. &nbsp;
-                  <a href="https://www.bookkercorp.com/" target="_blank" rel="noreferrer">webpage</a>, &nbsp;
-                  <a href="https://youtu.be/hM3mOG7bLEU" target="_blank" rel="noreferrer">video1</a>,  &nbsp;
-                  <a href="https://youtu.be/pYOwr3o-AWY" target="_blank" rel="noreferrer">video2</a>
-                </li>
-                {/*<li>Eation Tech. &nbsp;<a href="https://www.eationtech.com/">webpage</a>, &nbsp;<a href="https://youtu.be/0cbVPS4-VEQ">video</a></li>*/}
-                <li>White Mirror. &nbsp;<a href="https://www.whitemirror.es/" target="_blank" rel="noreferrer">webpage</a>,  &nbsp;
-                <a href="/wool-ar/" target="_blank" rel="noreferrer">Online Demo</a>
-                </li>
-              </ul>
+              <p>Companies and projects I am specially proud of:</p>
+              <motion.div
+                className="projects-grid"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                {[
+                  {
+                    title: 'ML Circle',
+                    description: 'A vibrant community connecting machine learning enthusiasts, researchers, and practitioners in Madrid and beyond.',
+                    image: ImgMlCircleBackground,
+                    imageBrightness: 1.5,
+                    category: 'AI Community',
+                    size: 'medium',
+                    links: [
+                      { label: 'Webpage', href: 'https://mlcircle.org/' },
+                      { label: 'Meetup', href: 'https://www.meetup.com/madrid-machine-learning-meetup/' },
+                      { label: 'Previous Talks', href: 'https://youtube.com/playlist?list=PLHeG8vnHL6C8mOU8K8vs2j9I7dSMYCgJQ&si=QQAqaV9PpU4w8aNZ' },
+                    ],
+                  },
+                  {
+                    title: 'New Horizon Technologies · Apolo AI',
+                    description: 'Cutting-edge AI solutions spanning medical imaging, video surveillance, and robotics. Creator of the Cardia cardiac analysis platform.',
+                    image: ImgCardiaBackground,
+                    category: 'AI Technology',
+                    size: 'large',
+                    links: [
+                      { label: 'Apolo AI', href: 'https://www.apoloai.com/' },
+                      { label: 'Cardia', href: 'https://cardia.ai/' },
+                      { label: 'Video', href: CardiaVideo },
+                    ],
+                  },
+                  {
+                    title: 'XOIA Software Development',
+                    description: 'Co-founded XR startup pioneering Augmented Reality solutions for historical heritage.',
+                    image: ImgXoiaBackground,
+                    category: 'XR Development',
+                    size: 'small',
+                    links: [
+                      { label: 'Project 1', href: 'https://youtu.be/gJum_Qv_Ws8' },
+                      { label: 'Project 2', href: 'https://youtu.be/74K1lK3kQJM' },
+                      { label: 'Facebook', href: 'https://www.facebook.com/XOIAextendingreality/' },
+                    ],
+                  },
+                  {
+                    title: 'The Graffter',
+                    description: 'Mobile XR platform transforming how we interact with and visualize building facades in urban environments.',
+                    image: ImgGraffterBackground,
+                    category: 'Outdoor Reconstruction and Localization',
+                    size: 'small',
+                    links: [
+                      { label: 'Webpage', href: 'http://www.thegraffter.com/en/' },
+                      { label: 'Videos', href: 'https://www.youtube.com/channel/UCaA4tTBqW6Wbkxz1Ep-4szw' },
+                      { label: 'Demo Video', href: 'https://youtu.be/XIBLZUiOKmc' },
+                    ],
+                  },
+                  {
+                    title: 'Bookker',
+                    description: 'Comprehensive booking and workspace management platform for modern offices and hospitality businesses.',
+                    image: ImgBookkerBackground,
+                    category: 'Workspace Management Tech',
+                    size: 'medium',
+                    links: [
+                      { label: 'Webpage', href: 'https://www.bookkercorp.com/' },
+                      { label: 'Video 1', href: 'https://youtu.be/hM3mOG7bLEU' },
+                      { label: 'Video 2', href: 'https://youtu.be/pYOwr3o-AWY' },
+                    ],
+                  },
+                  {
+                    title: 'White Mirror',
+                    description: 'Creative digital agency delivering immersive AR experiences, including a live online demo for Paloma Wool.',
+                    image: ImgWhiteMirrorBackground,
+                    category: 'Digital Fashion',
+                    size: 'small',
+                    links: [
+                      { label: 'Webpage', href: 'https://www.whitemirror.es/' },
+                      { label: 'Online Demo', href: '/wool-ar/' },
+                    ],
+                  },
+                ].map((project, i) => (
+                  <motion.div
+                    key={project.title}
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: i * 0.08 }}
+                  >
+                    <ProjectCard {...project} />
+                  </motion.div>
+                ))}
+              </motion.div>
             </div>
             <br/>
             <div>
