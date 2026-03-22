@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import mypicture from '../images/mypicture.jpg'
 import slide1 from '../images/LineSegmentDetection.jpg'
 import slide2 from '../images/FeatureDescription.jpg'
@@ -13,6 +14,7 @@ import SummerCampMIL23 from '../documents/SummerCampMIL23.pdf'
 import ImgELSED from '../images/ELSED.jpg'
 import ImgGlueStick from '../images/gluestick.gif'
 import ImgWireframe from '../images/WireframeDetector.gif'
+import ImgLightGlueStick from '../images/LightGlueStick.jpg'
 import ImgFSG from '../images/FsgIros18.gif'
 import ImgBelid from '../images/BelidImg.png'
 import ImgBeblid from '../images/BeblidImg.png'
@@ -54,9 +56,26 @@ function Publication(props) {
 }
 
 function Home () {
+  const [sidebarOpen, setSidebarOpen] = useState(false)
+
   return (
     <div className="App">
-      <div id="wrapper">
+      <div id="wrapper" className={sidebarOpen ? 'toggled' : ''}>
+        {/* Mobile hamburger button */}
+        <button
+          id="menu-toggle"
+          className="d-md-none"
+          onClick={() => setSidebarOpen(o => !o)}
+          aria-label="Toggle menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        {/* Mobile overlay to close sidebar */}
+        {sidebarOpen && (
+          <div id="sidebar-overlay" className="d-md-none" onClick={() => setSidebarOpen(false)} />
+        )}
+
         {/*Sidebar*/}
         <div id="sidebar-wrapper">
           <ul className="sidebar-nav">
@@ -178,6 +197,14 @@ I currently serve as a Staff Machine Learning Engineer at Qualcomm XR Labs Europ
             <br/>
             <div id="publications-section">
               <h2>Publications</h2>
+              <Publication name="LightGlueStick: a Fast and Robust Glue for Joint Point-Line Matching"
+                           img={ImgLightGlueStick}
+                           authors_year="Ubingazhibov, A., Pautrat, R., Suárez, I., Liu, S., Pollefeys, M., & Larsson, V. (2025)"
+                           venue={<span className="pub-venue"><span className="pub-venue-name">ICCV 2025 Workshops</span> (CroCoDL).</span>}
+                           links={[
+                             <a href="https://openaccess.thecvf.com/content/ICCV2025W/CroCoDL/papers/Ubingazhibov_LightGlueStick_a_Fast_and_Robust_Glue_for_Joint_Point-Line_Matching_ICCVW_2025_paper.pdf">Paper</a>,
+                             <a href="https://github.com/aubingazhib/LightGlueStick">Code</a>
+                           ]}/>
               <Publication name="Learning to Detect and Describe a Wireframe"
                            img={ImgWireframe}
                            authors_year="Ferre, I., Baumela, L., & Suárez, I. (2025)"

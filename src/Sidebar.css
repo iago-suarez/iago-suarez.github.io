@@ -148,6 +148,44 @@
     color: var(--color-sidebar-text);
 }
 
+/* Mobile hamburger button */
+#menu-toggle {
+    position: fixed;
+    top: 14px;
+    left: 14px;
+    z-index: 1100;
+    width: 42px;
+    height: 42px;
+    background: var(--color-sidebar);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 8px;
+    box-shadow: 0 2px 8px rgba(10, 31, 51, 0.3);
+}
+
+#menu-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--color-sidebar-text);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Overlay behind sidebar on mobile */
+#sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 31, 51, 0.45);
+    z-index: 999;
+}
+
 @media(min-width:768px) {
     #wrapper {
         padding-left: 250px;
