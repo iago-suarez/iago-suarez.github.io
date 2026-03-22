@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.14622ef3.css",
-    "main.js": "/static/js/main.15de65a9.js",
+    "main.js": "/static/js/main.39d2c9e6.js",
     "static/js/787.93b0a6bc.chunk.js": "/static/js/787.93b0a6bc.chunk.js",
     "static/media/vanishing.mp4": "/static/media/vanishing.c8392133d85dbb195b84.mp4",
     "static/media/Slides_IROS18.pdf": "/static/media/Slides_IROS18.83669e7002e92960b943.pdf",
@@ -16,6 +16,7 @@
     "static/media/Poster_ICVSS22_Iago_Suarez.pdf": "/static/media/Poster_ICVSS22_Iago_Suarez.3d6f773372900408867b.pdf",
     "static/media/ImgRAL21.gif": "/static/media/ImgRAL21.f6ba3a7e1dd58bfaf3b5.gif",
     "static/media/Poster_PhDSymposium19.pdf": "/static/media/Poster_PhDSymposium19.a5816fd3a0996d9440da.pdf",
+    "static/media/LightGlueStick.jpg": "/static/media/LightGlueStick.edee7fe69bd340df5fa1.jpg",
     "static/media/ElsedHeader.jpg": "/static/media/ElsedHeader.4d015790e9a338a9c056.jpg",
     "static/media/ELSED.jpg": "/static/media/ELSED.d0fd4701147abcc437d6.jpg",
     "static/media/GA_10AZ_103000856_2S_2020-21.pdf": "/static/media/GA_10AZ_103000856_2S_2020-21.cfe2ce1f25f957a811e4.pdf",
@@ -27,11 +28,11 @@
     "static/media/mypicture.jpg": "/static/media/mypicture.bc93879b9b3d3fd7903a.jpg",
     "index.html": "/index.html",
     "main.14622ef3.css.map": "/static/css/main.14622ef3.css.map",
-    "main.15de65a9.js.map": "/static/js/main.15de65a9.js.map",
+    "main.39d2c9e6.js.map": "/static/js/main.39d2c9e6.js.map",
     "787.93b0a6bc.chunk.js.map": "/static/js/787.93b0a6bc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.14622ef3.css",
-    "static/js/main.15de65a9.js"
+    "static/js/main.39d2c9e6.js"
   ]
 }
