@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.932dfebb.css",
-    "main.js": "/static/js/main.e2e7ebe9.js",
+    "main.css": "/static/css/main.4383450e.css",
+    "main.js": "/static/js/main.e83155b2.js",
     "static/js/787.93b0a6bc.chunk.js": "/static/js/787.93b0a6bc.chunk.js",
     "static/media/vanishing.mp4": "/static/media/vanishing.c8392133d85dbb195b84.mp4",
     "static/media/Slides_IROS18.pdf": "/static/media/Slides_IROS18.83669e7002e92960b943.pdf",
@@ -27,18 +27,19 @@
     "static/media/GraffterBackground.jpg": "/static/media/GraffterBackground.d91e62569992966a1ed4.jpg",
     "static/media/FeatureDescription.jpg": "/static/media/FeatureDescription.f1032098e25db88bdf17.jpg",
     "static/media/BeblidImg.png": "/static/media/BeblidImg.5b8c713ad3fbac90ccd5.png",
+    "static/media/iago_suarez_resume.pdf": "/static/media/iago_suarez_resume.6308a22f94d0670bb83c.pdf",
     "static/media/BookkerBackground.jpg": "/static/media/BookkerBackground.350b45048871a4a05d07.jpg",
     "static/media/XoiaBackground.jpg": "/static/media/XoiaBackground.50b99de04a9482b74849.jpg",
     "static/media/BelidImg.png": "/static/media/BelidImg.c824f410b928f5b84f87.png",
     "static/media/mypicture.jpg": "/static/media/mypicture.bc93879b9b3d3fd7903a.jpg",
     "static/media/WhiteMirrorBackground.jpg": "/static/media/WhiteMirrorBackground.0752c6f8c832fbad1e51.jpg",
     "index.html": "/index.html",
-    "main.932dfebb.css.map": "/static/css/main.932dfebb.css.map",
-    "main.e2e7ebe9.js.map": "/static/js/main.e2e7ebe9.js.map",
+    "main.4383450e.css.map": "/static/css/main.4383450e.css.map",
+    "main.e83155b2.js.map": "/static/js/main.e83155b2.js.map",
     "787.93b0a6bc.chunk.js.map": "/static/js/787.93b0a6bc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.932dfebb.css",
-    "static/js/main.e2e7ebe9.js"
+    "static/css/main.4383450e.css",
+    "static/js/main.e83155b2.js"
   ]
 }
