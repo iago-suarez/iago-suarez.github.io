@@ -11,6 +11,7 @@ import SlidesTFM from '../documents/Slides_TFM_iago.pdf'
 import SlidesPhD from '../documents/Slides_PhD_iago.pdf'
 import PosterICVSS22 from '../documents/Poster_ICVSS22_Iago_Suarez.pdf'
 import SummerCampMIL23 from '../documents/SummerCampMIL23.pdf'
+import Resume from '../documents/iago_suarez_resume.pdf'
 import ImgELSED from '../images/ELSED.jpg'
 import ImgGlueStick from '../images/gluestick.gif'
 import ImgWireframe from '../images/WireframeDetector.gif'
@@ -123,6 +124,11 @@ function Home () {
             <li className="sidebar-social-item">
               <a className="sidebar-social-link" href="https://www.linkedin.com/in/iago-suarez/">
                 <Icon.Linkedin className="sidebar-social-icon"/> LinkedIn
+              </a>
+            </li>
+            <li className="sidebar-social-item">
+              <a className="sidebar-social-link" href={Resume} target="_blank" rel="noreferrer">
+                <Icon.FileText className="sidebar-social-icon"/> Resume
               </a>
             </li>
           </ul>
